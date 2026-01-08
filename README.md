@@ -1,36 +1,70 @@
-# Projeto - Máquina de Bebidas com ESP32 e Interface Nextion
-Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé, desenvolvido durante a disciplina DCC903 - Sitemas embarcados
+# Automated Coffee & Tea Machine (ESP32 + Nextion)
 
-## Conteúdo
-- `docs/` - Documentação do projeto, incluindo o relatório requisitos, diagramas e manuais.
-- `maquina_cafe_tela/` - Inclui os arquivos do projeto da interface Nextion e o código-fonte utilizado no ESP32.
+This project is an embedded system for a hot beverage vending machine (coffee and tea). It uses an ESP32 for logic control, ultrasonic sensors for process detection, and a Nextion display for the Human-Machine Interface (HMI).
 
-## Software Utilizado
-- [Arduino IDE](https://www.arduino.cc/en/software)
-- [Editor Nextion LTS](https://nextion.tech/download/nextion-setup-vLTS.zip)
-- [TinkerCad](https://www.tinkercad.com/)
-- 
+## 📂 Contents
 
-## Hardware
-Para o projeto, fora utilizados componentes impressos em 3d.
-- [Link para os arquivos de impressão 3D](https://www.thingiverse.com/thing:5152575)
-- 1x Placa ESP32 Devkit V1
-- 1x Interface Homem Máquina - Nextion 3224T024_011
-- 2x Sensor Sônico HC-SR04
-- 1x Módulo Relé SRD-05VDC-SL-C
-- 2x Bomba Peristáltica - Rohs Grothen G328
-- 1x bateria Chumbo-Ácido Regulada por Válvula(VRLA) 12V
-- 1x Case impresso com PLA.
-- 1x Case para moedas impresso com PLA
-- 2x Mangueiras
+The project directory structure is organized as follows:
 
-## Autores:
-- Andersson Pereira
-- Matheus Rebouças
-- Paulo César Pereira Belmont
-- Sarah Evelyn
+* **`docs/`** - Project documentation, including requirements reports, circuit diagrams, and operation manuals.
+* **`maquina_cafe_tela/`** - Includes the Nextion interface project files (`.HMI`, `.tft`) and the source code (`.ino`) used on the ESP32.
 
-## Pinagem ESP32
+## 🛠 Hardware
 
+The physical project consists of the following components:
 
-## Licença
+**Control & Interface**
+* 1x ESP32 Devkit V1 Board
+* 1x Nextion NX3224T024_011 Display (Touchscreen)
+
+**Sensors & Actuators**
+* 2x HC-SR04 Ultrasonic Sensors (Coin and Cup detection)
+* 2x Peristaltic Pumps - Rohs Grothen G328
+* 1x Relay Module SRD-05VDC-SL-C (Pump/Power control)
+
+**Power & Structure**
+* 1x Valve Regulated Lead-Acid (VRLA) Battery 12V
+* 2x 3D Printed Cases (PLA) for main structure and coin mechanism
+* 1x 3D Printed Plate (PLA)
+* 2x 3D Printed Liquid Reservoirs (PLA)
+* Hoses and Dispensing Nozzles
+
+## Software Used
+
+* **Arduino IDE:** For ESP32 firmware programming.
+* **Nextion Editor (LTS):** For graphical interface development.
+* **TinkerCad:** For 3D modeling and/or circuit simulation.
+
+## How it Works
+
+The code operates based on a Finite State Machine (FSM), ensuring the process follows a safe logical order:
+
+1.  **Start:** The system initializes and waits for a coin to be inserted.
+2.  **Coin Insertion:** The HC-SR04 sensor (Pins X/Y) detects a coin drop.
+3.  **Cup Placement:** The second HC-SR04 sensor (Pins X/Y) verifies a cup is in the dispenser.
+4.  **Selection:** The user selects "Coffee" or "Tea" on the Nextion screen.
+5.  **Preparation:** The corresponding pump is activated for a set duration , updating a progress bar on the screen.
+6.  **Completion:** The system waits for the cup to be removed before resetting to the start state for a new cycle.
+
+## 🔌 Pinout (ESP32)
+
+| Component | ESP32 Pin | Function |
+| :--- | :--- | :--- |
+| **Coin Trig** | GPIO 32 | Coin Sensor Trigger |
+| **Coin Echo** | GPIO 33 | Coin Sensor Echo |
+| **Cup Trig** | GPIO 19 | Cup Sensor Trigger |
+| **Cup Echo** | GPIO 18 | Cup Sensor Echo |
+| **Coffee Relay** | GPIO 25 | Coffee Pump Activation |
+| **Tea Relay** | GPIO 26 | Tea Pump Activation |
+| **Nextion RX** | GPIO 16 | RX2 (Serial) |
+| **Nextion TX** | GPIO 17 | TX2 (Serial) |
+
+## Authors
+
+* Andersson Silva Pereira
+* Matheus Rebouças de Lima
+* Paulo César Pereira Belmont
+* Sarah Evelyn do Vale Silva
+
+---
+*This project was developed for educational purposes in embedded systems.*
