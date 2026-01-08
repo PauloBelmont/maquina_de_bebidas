@@ -4,7 +4,7 @@ Obrigado por seu interesse em contribuir com o projeto **Máquina de Bebidas (ES
 
 Siga as etapas abaixo para colaborar de forma eficiente e segura com o hardware.
 
-## 🧾 Estrutura do Repositório
+## Estrutura do Repositório
 
 Entenda onde cada parte do projeto está localizada:
 
@@ -16,7 +16,7 @@ Entenda onde cada parte do projeto está localizada:
 
 ---
 
-## 📌 Requisitos para Contribuir
+## Requisitos para Contribuir
 
 Para rodar e modificar este projeto, você precisará das seguintes ferramentas:
 
@@ -31,7 +31,7 @@ Para rodar e modificar este projeto, você precisará das seguintes ferramentas:
 
 ---
 
-## 🚀 Etapas para Contribuir
+## Etapas para Contribuir
 
 1. **Faça um Fork e Clone**
    ```bash
@@ -67,7 +67,7 @@ Para rodar e modificar este projeto, você precisará das seguintes ferramentas:
 
 ---
 
-## ✅ Boas Práticas de Sistemas Embarcados
+## Boas Práticas de Sistemas Embarcados
 
 * **Pinagem (Pinout):** Nunca altere a definição de pinos no código sem verificar se isso conflita com o hardware montado (ex: pinos de *boot* do ESP32 ou pinos exclusivos de entrada).
 * **Bibliotecas:** Evite usar bibliotecas muito pesadas que ocupem muita memória do ESP32 sem necessidade.
@@ -76,7 +76,7 @@ Para rodar e modificar este projeto, você precisará das seguintes ferramentas:
 
 ---
 
-## 🛠 Sugestões de Contribuição
+## Sugestões de Contribuição
 
 * **Refatoração:** Melhorar a máquina de estados do código Arduino.
 * **Calibração:** Ajustar os valores do sensor ultrassônico (HC-SR04) para detectar copos com maior precisão.
@@ -85,7 +85,7 @@ Para rodar e modificar este projeto, você precisará das seguintes ferramentas:
 
 ---
 
-## 📫 Dúvidas?
+## Dúvidas?
 
 Abra uma [issue](https://github.com/PauloBelmont/maquina_de_bebidas/issues) se tiver dúvidas sobre as conexões elétricas ou sobre a lógica de comunicação Serial entre o ESP32 e o Nextion.
 
