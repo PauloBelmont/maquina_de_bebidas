@@ -1,92 +1,78 @@
-# Guia de Contribuição
+# Contributing Guide
 
-Obrigado por seu interesse em contribuir com o projeto **Máquina de Bebidas (ESP32 + Nextion)**! Este repositório contém os artefatos desenvolvidos para a disciplina **DCC903 - Sistemas Embarcados**, integrando hardware, firmware e design mecânico.
+Thank you for your interest in contributing to the **Coffee Machine (ESP32 + Nextion)** project! This repository contains the artifacts developed for an embedded systems project, combining firmware, HMI (Nextion), and documentation.
 
-Siga as etapas abaixo para colaborar de forma eficiente e segura com o hardware.
+Follow the steps below to contribute efficiently and safely—especially when changes affect real hardware.
 
-## Estrutura do Repositório
+## What’s in this repository?
 
-Entenda onde cada parte do projeto está localizada:
+- `maquina_cafe_tela/`
+  - **Firmware**: ESP32 source code (sensors, pumps, relays, control logic).
+  - **HMI**: Nextion project files used to build the touchscreen interface.
+- `docs/`
+  - Project documentation (requirements, diagrams, manuals, reports).
 
-* **`maquina_cafe_tela/`**: O coração do projeto.
-    * **Código Fonte (`.ino`):** Lógica de controle do ESP32 (sensores, bombas, relés).
-    * **Interface (`.HMI` / `.tft`):** Arquivos do Editor Nextion para a tela touch.
-* **`docs/`**: Documentação de engenharia (requisitos, diagramas de pinagem, manuais e relatório técnico).
-* **Hardware/3D**: Links para os arquivos STL das peças impressas (Case, moedeiro).
+## Requirements
 
----
+Before contributing, make sure you have:
 
-## Requisitos para Contribuir
+- **Software**
+  - Arduino IDE: https://www.arduino.cc/en/software
+  - Nextion Editor (LTS): https://nextion.tech/download/nextion-setup-vLTS.zip
+  - Git: https://git-scm.com/
+- **Hardware (recommended for real testing)**
+  - ESP32 Devkit V1, Nextion display, sensors and actuators listed in the README.
 
-Para rodar e modificar este projeto, você precisará das seguintes ferramentas:
+## How to contribute
 
-1. **Hardware (para testes reais):**
-   * ESP32 Devkit V1 e Display Nextion (modelo 3224T024_011).
-   * Sensores HC-SR04 e atuadores conforme lista de materiais.
-2. **Software (obrigatório):**
-   * [Arduino IDE](https://www.arduino.cc/en/software) (com as bibliotecas do ESP32 instaladas).
-   * [Editor Nextion LTS](https://nextion.tech/download/nextion-setup-vLTS.zip) para editar a interface gráfica.
-3. **Simulação (Opcional):**
-   * Conta no [TinkerCad](https://www.tinkercad.com/) caso não possua o hardware físico para validar a lógica básica.
-
----
-
-## Etapas para Contribuir
-
-1. **Faça um Fork e Clone**
+1. **Fork the repository** (GitHub UI).
+2. **Clone your fork**
    ```bash
    git clone https://github.com/PauloBelmont/maquina_de_bebidas.git
    cd maquina_de_bebidas
    ```
-
-2. **Crie uma Branch Descritiva**
-   Use prefixos para identificar se a alteração é no firmware, na tela ou na doc:
+3. **Create a new branch**
+   Use a descriptive name and prefix:
    ```bash
-   git checkout -b firmware/correcao-leitura-sensor
-   # ou
-   git checkout -b hmi/novo-botao-cafe
+   git checkout -b firmware/fix-sensor-reading
+   # or
+   git checkout -b hmi/improve-main-screen
+   # or
+   git checkout -b docs/update-pinout
    ```
-
-3. **Desenvolvimento e Testes**
-
-   * **Se mexer no Código (.ino):** Certifique-se de que compila na Arduino IDE sem erros. Se adicionar bibliotecas novas, atualize a documentação.
-   * **Se mexer na Tela (.HMI):** Gere o arquivo compilado no Editor Nextion e teste a comunicação Serial com o ESP32.
-   * **Se mexer na Pinagem:** **CUIDADO!** Alterações de pinos devem ser refletidas imediatamente no arquivo `docs/` e no `README.md` para evitar curto-circuitos na montagem física.
-
-4. **Commit e Push**
-   Descreva se a alteração exige atualização do hardware (ex: mudar um jumper de lugar).
+4. **Make your changes**
+   - Keep firmware and HMI changes organized.
+   - If you change wiring/pins, update documentation immediately to avoid hardware damage.
+5. **Commit your changes**
+   Write clear commit messages:
    ```bash
    git add .
-   git commit -m "Ajusta tempo de acionamento da Bomba 1 para 5 segundos"
-   git push origin firmware/correcao-leitura-sensor
+   git commit -m "Fix relay activation logic to prevent pump from running indefinitely"
    ```
+6. **Push your branch**
+   ```bash
+   git push origin firmware/fix-sensor-reading
+   ```
+7. **Open a Pull Request**
+   - Describe what changed and why.
+   - Include how you tested (simulation vs real hardware).
+   - If you changed the Nextion UI, add screenshots/photos.
 
-5. **Abra um Pull Request**
-   * Descreva quais componentes foram testados.
-   * Se alterou a interface, anexe um *screenshot* ou foto da tela Nextion.
+## Best practices (embedded + hardware)
 
----
+- **Pin safety:** Do not change ESP32 pins without checking conflicts (boot pins, input-only pins, etc.).
+- **Fail-safe behavior:** Make sure pumps/relays cannot stay ON due to loops, crashes, or missing state transitions.
+- **Input validation:** Validate data coming from the Nextion serial interface before triggering actions.
+- **Repository hygiene:** Do not commit generated/temporary files or IDE-specific folders.
 
-## Boas Práticas de Sistemas Embarcados
+## Good contribution ideas
 
-* **Pinagem (Pinout):** Nunca altere a definição de pinos no código sem verificar se isso conflita com o hardware montado (ex: pinos de *boot* do ESP32 ou pinos exclusivos de entrada).
-* **Bibliotecas:** Evite usar bibliotecas muito pesadas que ocupem muita memória do ESP32 sem necessidade.
-* **Interface Nextion:** Ao nomear variáveis na tela Nextion, use nomes curtos e claros, pois isso facilita o envio de comandos via Serial.
-* **Arquivos Gerados:** Evite subir arquivos compilados temporários, mas **mantenha** o `.tft` (compilado da tela) atualizado se houver mudanças visuais, para facilitar a gravação por outros devs.
+- Improve the firmware state machine (dispense flow, error states).
+- Calibrate HC-SR04 detection logic for more reliable cup sensing.
+- Improve Nextion UI/UX (feedback screens, progress states, error prompts).
+- Complete and maintain pinout documentation in `docs/` and README.
 
----
+## Questions / Support
 
-## Sugestões de Contribuição
-
-* **Refatoração:** Melhorar a máquina de estados do código Arduino.
-* **Calibração:** Ajustar os valores do sensor ultrassônico (HC-SR04) para detectar copos com maior precisão.
-* **Interface:** Melhorar a UX/UI da tela Nextion (ícones, feedback visual de "preparando").
-* **Documentação:** Preencher a seção de "Pinagem ESP32" no README principal, que atualmente está vazia.
-
----
-
-## Dúvidas?
-
-Abra uma [issue](https://github.com/PauloBelmont/maquina_de_bebidas/issues) se tiver dúvidas sobre as conexões elétricas ou sobre a lógica de comunicação Serial entre o ESP32 e o Nextion.
-
----
+Please open an issue for bugs, questions, or suggestions:
+https://github.com/PauloBelmont/maquina_de_bebidas/issues
