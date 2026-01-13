@@ -1,5 +1,11 @@
 # Automated Coffee & Tea Machine (ESP32 + Nextion)
 
+## 📚 About This Project
+
+This project was developed at the **Federal University of Roraima (UFRR)**, in the **Maloca das iCoisas Laboratory**, as part of the course **COMP 923 - Embedded Systems**, under the guidance of [**Prof. Herbert Rocha**](https://github.com/hbgit).
+
+---
+
 This project is an embedded system for a hot beverage vending machine (coffee and tea). It uses an ESP32 for logic control, ultrasonic sensors for process detection, and a Nextion display for the Human-Machine Interface (HMI).
 
 ## 📂 Contents
@@ -7,7 +13,7 @@ This project is an embedded system for a hot beverage vending machine (coffee an
 The project directory structure is organized as follows:
 
 * **`docs/`** - Project documentation, including requirements reports, circuit diagrams, and operation manuals.
-* **`maquina_cafe_tela/`** - Includes the Nextion interface project files (`.HMI`, `.tft`) and the source code (`.ino`) used on the ESP32.
+* **`src/`** - Includes the Nextion interface project files (`.HMI`, `.tft`) and the source code (`.ino`) used on the ESP32.
 
 ## 🛠 Hardware
 
@@ -61,10 +67,10 @@ The code operates based on a Finite State Machine (FSM), ensuring the process fo
 
 ## Authors
 
-* Andersson Silva Pereira
-* Matheus Rebouças de Lima
-* Paulo César Pereira Belmont
-* Sarah Evelyn do Vale Silva
+* Andersson Silva Pereira - andersonwya4@gmail.com
+* Matheus Rebouças de Lima - matheuskid11@gmail.com
+* Paulo César Pereira Belmont - paulopereira737@hotmail.com
+* Sarah Evelyn do Vale Silva - sarahevelyn.scholar@gmail.com
 
 ---
 *This project was developed for educational purposes in embedded systems.*
