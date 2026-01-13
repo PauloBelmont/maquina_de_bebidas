@@ -1,5 +1,7 @@
 # Automated Coffee & Tea Machine (ESP32 + Nextion)
 
+![3D-printed coffee and tea vending machine prototype disassembled on a workbench, showing the main enclosure with screen and DCC logo, side panels, cylindrical reservoirs, wiring and assembly tools](src/docs/img/project3d-overview.jpeg)
+
 This project is an embedded system for a hot beverage vending machine (coffee and tea). It uses an ESP32 for logic control, ultrasonic sensors for process detection, and a Nextion display for the Human-Machine Interface (HMI).
 
 ## 📂 Contents
@@ -37,6 +39,8 @@ The physical project consists of the following components:
 
 ## How it Works
 
+![Team members assembling the 3D-printed coffee machine structure and gluing components during the prototype build](src/docs/img/project3d-team-workbench-2.jpeg)
+
 The code operates based on a Finite State Machine (FSM), ensuring the process follows a safe logical order:
 
 1.  **Start:** The system initializes and waits for a coin to be inserted.
@@ -61,10 +65,14 @@ The code operates based on a Finite State Machine (FSM), ensuring the process fo
 
 ## Authors
 
-* Andersson Silva Pereira
-* Matheus Rebouças de Lima
-* Paulo César Pereira Belmont
-* Sarah Evelyn do Vale Silva
+- **Andersson Silva Pereira** — *andersonwya4@gmail.com*
+- **Matheus Rebouças de Lima** — *mthsbusiness91@protonmail.com*
+- **Paulo César Pereira Belmont** — *paulopereira737@hotmail.com*
+- **Sarah Evelyn do Vale Silva** — *sarahevelyn.scholar@gmail.com*
+
+## Additional Photos
+
+More photos of the 3D-printed parts, internal circuits and assembly process are available in the [`src/docs/img/`](src/docs/img/) folder.
 
 ---
-*This project was developed for educational purposes in embedded systems.*
+*This project was developed for educational purposes in embedded systems at Universidade Federal de Roraima (UFRR), in the CIT – Centro de Inovação e Tecnologia (Innovation and Technology Center).*
