@@ -40,6 +40,7 @@ The physical project consists of the following components:
 * **Arduino IDE:** For ESP32 firmware programming.
 * **Nextion Editor (LTS):** For graphical interface development.
 * **TinkerCad:** For 3D modeling and/or circuit simulation.
+* **Doxygen:** For source code documentation.
 
 ## How it Works
 
