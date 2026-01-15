@@ -1,5 +1,9 @@
 # Automated Coffee & Tea Machine (ESP32 + Nextion)
 
+## 📚 About This Project
+
+This project was developed at the **Federal University of Roraima (UFRR)**, in the **Maloca das iCoisas Laboratory**, as part of the course **COMP 923 - Embedded Systems**, under the guidance of [**Prof. Herbert Rocha**](https://github.com/hbgit).
+
 ![3D-printed coffee and tea vending machine prototype disassembled on a workbench, showing the main enclosure with screen and DCC logo, side panels, cylindrical reservoirs, wiring and assembly tools](src/docs/img/project3d-overview.jpeg)
 
 This project is an embedded system for a hot beverage vending machine (coffee and tea). It uses an ESP32 for logic control, ultrasonic sensors for process detection, and a Nextion display for the Human-Machine Interface (HMI).
@@ -9,7 +13,7 @@ This project is an embedded system for a hot beverage vending machine (coffee an
 The project directory structure is organized as follows:
 
 * **`docs/`** - Project documentation, including requirements reports, circuit diagrams, and operation manuals.
-* **`maquina_cafe_tela/`** - Includes the Nextion interface project files (`.HMI`, `.tft`) and the source code (`.ino`) used on the ESP32.
+* **`src/`** - Includes the Nextion interface project files (`.HMI`, `.tft`) and the source code (`.ino`) used on the ESP32.
 
 ## 🛠 Hardware
 
@@ -36,6 +40,7 @@ The physical project consists of the following components:
 * **Arduino IDE:** For ESP32 firmware programming.
 * **Nextion Editor (LTS):** For graphical interface development.
 * **TinkerCad:** For 3D modeling and/or circuit simulation.
+* **Doxygen:** For source code documentation.
 
 ## How it Works
 
@@ -73,6 +78,3 @@ The code operates based on a Finite State Machine (FSM), ensuring the process fo
 ## Additional Photos
 
 More photos of the 3D-printed parts, internal circuits and assembly process are available in the [`src/docs/img/`](src/docs/img/) folder.
-
----
-*This project was developed for educational purposes in embedded systems at Universidade Federal de Roraima (UFRR), in the CIT – Centro de Inovação e Tecnologia (Innovation and Technology Center).*
