@@ -1,8 +1,9 @@
 # Technical Report
 
-## **Project: Automated Hot Beverage Machine (Coffee and Tea)**
+Project: Automated Hot Beverage Machine (Coffee and Tea)
+========================================================
 
-### Repository: [PauloBelmont/maquina_de_bebidas](https://github.com/PauloBelmont/maquina_de_bebidas)
+<h3>Repository: <a href="https://github.com/PauloBelmont/maquina_de_bebidas">PauloBelmont/maquina_de_bebidas</a></h3>
 
 **Authors:** Andersson Silva Pereira, Matheus Rebouças de Lima, Paulo César Pereira Belmont, Sarah Evelyn do Vale Silva ([GitHub][1])
 **License:** MIT ([GitHub][1])
@@ -20,11 +21,9 @@
 
 ---
 
----
-
 ## 📌 1. Project Overview
 
-The **"Automated Hot Beverage Machine"** project consists of an **embedded system for autonomous acquisition and preparation of hot beverages** (coffee and tea), integrating sensors, actuators, and human-machine interface (HMI). The system was developed with focus on educational applications and rapid prototyping in the context of embedded systems.
+The &quot;<b>Automated Hot Beverage Machine</b>&quot; project consists of an **embedded system for autonomous acquisition and preparation of hot beverages** (coffee and tea), integrating sensors, actuators, and human-machine interface (HMI). The system was developed with focus on educational applications and rapid prototyping in the context of embedded systems.
 
 ---
 
@@ -37,6 +36,18 @@ This technical report addresses:
 * **Technical innovation and technological differentiation**;
 * **Relevance for R&D&I**;
 * **Conclusions and evolution recommendations**.
+
+---
+
+### 📚 2.1 Related Work & Theoretical Analysis
+
+To validate the architectural decisions of this project, a comparative study was conducted against four academic references (A1-A4), analyzing commonalities in embedded automation and differences in application scope (3D printing, education, energy efficiency).
+
+*   **[📄 Read the Full Literature Comparison](literature_comparison.md)**
+
+Furthermore, the core control logic relies on a Finite State Machine (FSM). A detailed analysis of states, transitions, and safety conditions is available in the dedicated analysis document.
+
+*   **[⚙️ Read the FSM Logic Analysis](fsm_analysis.md)**
 
 ---
 

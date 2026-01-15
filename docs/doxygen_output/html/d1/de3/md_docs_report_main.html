@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Automated Coffee &amp; Tea Machine: Technical Report</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen_custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Automated Coffee &amp; Tea Machine
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">ESP32-based embedded system for hot beverage vending with Nextion HMI</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/de3/md_docs_report_main.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Technical Report </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md21"></a>
+Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
+<h3>Repository: <a href="https://github.com/PauloBelmont/maquina_de_bebidas">PauloBelmont/maquina_de_bebidas</a></h3>
+<p><b>Authors:</b> Andersson Silva Pereira, Matheus Rebouças de Lima, Paulo César Pereira Belmont, Sarah Evelyn do Vale Silva (<a href="https://github.com/PauloBelmont/maquina_de_bebidas" title="GitHub - PauloBelmont/maquina_de_bebidas: Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé">GitHub</a>) <b>License:</b> MIT (<a href="https://github.com/PauloBelmont/maquina_de_bebidas" title="GitHub - PauloBelmont/maquina_de_bebidas: Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé">GitHub</a>) <b>Date:</b> <em>January / 2026</em> <b>CAPES Category:</b> Prototype, system, artifact, or computational process with functional validation.</p>
+<p><b>Report Objective:</b> Document technological architecture, innovation, components, and system operation.</p>
+<p><b>Justification:</b></p>
+<ul>
+<li>Functional embedded system, not merely conceptual;</li>
+<li>Integrates hardware–software integration;</li>
+<li>Possesses technical documentation (report, UML diagrams, architecture);</li>
+<li>Is reproducible and subject to experimental validation.</li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md23"></a>
+📌 1. Project Overview</h2>
+<p>The &quot;<b>Automated Hot Beverage Machine</b>&quot; project consists of an <b>embedded system for autonomous acquisition and preparation of hot beverages</b> (coffee and tea), integrating sensors, actuators, and human-machine interface (HMI). The system was developed with focus on educational applications and rapid prototyping in the context of embedded systems.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md25"></a>
+📐 2. Solution Scope</h2>
+<p>This technical report addresses:</p>
+<ul>
+<li><b>Technological architecture</b> of the system (hardware and software);</li>
+<li><b>Control methods and user interface</b>;</li>
+<li><b>Technical innovation and technological differentiation</b>;</li>
+<li><b>Relevance for R&amp;D&amp;I</b>;</li>
+<li><b>Conclusions and evolution recommendations</b>.</li>
+</ul>
+<hr  />
+<h3><a class="anchor" id="autotoc_md27"></a>
+📚 2.1 Related Work &amp; Theoretical Analysis</h3>
+<p>To validate the architectural decisions of this project, a comparative study was conducted against four academic references (A1-A4), analyzing commonalities in embedded automation and differences in application scope (3D printing, education, energy efficiency).</p>
+<ul>
+<li><b><a class="el" href="../../d9/d83/md_docs_report_literature_comparison.html">📄 Read the Full Literature Comparison</a></b></li>
+</ul>
+<p>Furthermore, the core control logic relies on a Finite State Machine (FSM). A detailed analysis of states, transitions, and safety conditions is available in the dedicated analysis document.</p>
+<ul>
+<li><b><a class="el" href="../../dc/d44/md_docs_report_fsm_analysis.html">⚙️ Read the FSM Logic Analysis</a></b></li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md29"></a>
+🏗️ 3. Technological Architecture</h2>
+<h3><a class="anchor" id="autotoc_md30"></a>
+🔌 3.1 Hardware</h3>
+<p>The machine utilizes a hybrid architecture combining electronic modules, detection sensors, and user interface:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Component   </th><th class="markdownTableHeadNone">Primary Function    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>ESP32 Devkit V1</b>   </td><td class="markdownTableBodyNone">Main control unit (MCU)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Display Nextion NX3224T024_011</b>   </td><td class="markdownTableBodyNone">Graphical interface and touchscreen (HMI)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Ultrasonic Sensors HC-SR04</b>   </td><td class="markdownTableBodyNone">Coin insertion and cup presence detection    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Peristaltic Pumps</b>   </td><td class="markdownTableBodyNone">Precise liquid dispensing    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Relay Module SRD-05VDC-SL-C</b>   </td><td class="markdownTableBodyNone">Pump control / power management    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Power Supply (12V Battery)</b>   </td><td class="markdownTableBodyNone">System power    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>3D-Printed Reservoirs</b>   </td><td class="markdownTableBodyNone">Physical liquid storage   </td></tr>
+</table>
+<p><b>Integration Description:</b> The <b>ESP32</b> orchestrates all modules, receiving sensor signals and commanding dosage pumps, ensuring the machine's operation cycle executes sequentially and safely. Event detection (such as coin insertion or cup presence) is performed by ultrasound, executing periodic readings and activations according to defined states.</p>
+<hr  />
+<h3><a class="anchor" id="autotoc_md32"></a>
+🧠 3.2 Software</h3>
+<h4><a class="anchor" id="autotoc_md33"></a>
+🗂️ 3.2.1 Firmware (ESP32)</h4>
+<p>The firmware is <b>developed in C++ for the ESP32</b>, with logic based on <b>Finite State Machine (FSM)</b> to control operation phases:</p>
+<ol type="1">
+<li><b>Initialization:</b> sensor and display setup</li>
+<li><b>Coin awaiting:</b> ultrasonic sensor detects insertion</li>
+<li><b>Cup detection:</b> second sensor reading</li>
+<li><b>Beverage selection:</b> via touchscreen interface</li>
+<li><b>Dispensing:</b> activation of corresponding pump</li>
+<li><b>Cycle completion:</b> cup removal detection and reset</li>
+</ol>
+<p>This state pattern improves safety and reliability of the preparation process.</p>
+<hr  />
+<h3><a class="anchor" id="autotoc_md35"></a>
+🎨 3.2.2 Human-Machine Interface (Nextion)</h3>
+<p>The graphical interface is designed to:</p>
+<ul>
+<li>Enable intuitive beverage selection;</li>
+<li>Display user feedback (e.g., progress, error messages);</li>
+<li>Connect via UART serial to the ESP32.</li>
+</ul>
+<p>The use of <b>Nextion</b> display facilitates building complex interfaces without overloading the main microcontroller.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md37"></a>
+🚀 4. Technological Innovation</h2>
+<p>This project presents innovative aspects for educational applications and prototyping:</p>
+<h3><a class="anchor" id="autotoc_md38"></a>
+✓ Finite State Machine (FSM) Usage</h3>
+<p>FSM adoption organizes control flow and ensures robustness against asynchronous events, an essential factor in reactive embedded systems.</p>
+<hr  />
+<h3><a class="anchor" id="autotoc_md40"></a>
+✓ Ultrasonic Sensing</h3>
+<p>The use of <b>ultrasonic sensors for coin and cup detection</b> is more precise and less susceptible to failures than simple mechanical switches.</p>
+<hr  />
+<h3><a class="anchor" id="autotoc_md42"></a>
+✓ Agile Interface with Nextion</h3>
+<p>The separation between control (ESP32) and graphical interface (Nextion) is an architectural characteristic that <b>improves modularity and scalability</b>, especially when compared with systems implementing UI directly in firmware.</p>
+<hr  />
+<h3><a class="anchor" id="autotoc_md44"></a>
+✓ 3D Printing Applied to Prototyping</h3>
+<p>The use of <b>3D-printed components</b> for physical structure enables rapid adjustments and design customization, a differentiator for R&amp;D of interactive prototypes and IoT systems.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md46"></a>
+📈 5. Innovation Characteristics and Impact</h2>
+<p>This project demonstrates <b>an advance in teaching embedded systems and sensory integration with actuators</b>. Furthermore:</p>
+<ul>
+<li>ESP32 use incorporates future connectivity (Wi-Fi/Bluetooth) for telemetry or remote control;</li>
+<li>Architectural modularity facilitates evolution (e.g., NFC payment, cloud integration, consumption tracking, real-time dashboards);</li>
+<li>Can evolve into a minimum viable product in commercial environments or events.</li>
+</ul>
+<p>This foundation is comparable to beverage automation trends, where intelligent autonomous systems address automated preparation and dispensing solutions — technically relevant in the current context of automation and services. (<a href="https://www.tecmundo.com.br/tecnologia/47158-10-bartenders-robos-que-fazem-drinks-tao-bem-quanto-os-humanos.htm?utm_source=chatgpt.com" title="10 bartenders robôs que fazem drinks tão bem quanto os humanos | Internet">TecMundo</a>)</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md48"></a>
+🧩 6. Conceptual Diagram (Text)</h2>
+<div class="fragment"><div class="line">[Ultrasonic Sensor 1]       [Ultrasonic Sensor 2]</div>
+<div class="line">           │                        │</div>
+<div class="line">           └──────&gt; ESP32 MCU &lt;─────┘</div>
+<div class="line">                    │   ↓   ↑</div>
+<div class="line">                    │    Nextion Display</div>
+<div class="line">                    ↓</div>
+<div class="line">           [Power Relay] ──→ [Peristaltic Pumps]</div>
+<div class="line">                    ↓</div>
+<div class="line">              Dispensing System</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
+🔄 7. System Architecture Diagram</h2>
+<div class="fragment"><div class="line">┌─────────────────────────────────────────────────────┐</div>
+<div class="line">│              ESP32 Firmware (FSM)                   │</div>
+<div class="line">│  ┌──────────┐  ┌──────────┐  ┌──────────┐          │</div>
+<div class="line">│  │ Sensor   │  │ Actuator │  │ Serial   │          │</div>
+<div class="line">│  │ Manager  │  │Controller│  │ Comm     │          │</div>
+<div class="line">│  └──────────┘  └──────────┘  └──────────┘          │</div>
+<div class="line">└────────┬──────────────┬──────────────┬──────────────┘</div>
+<div class="line">         │              │              │</div>
+<div class="line">    ┌────▼─┐       ┌────▼──┐      ┌───▼────┐</div>
+<div class="line">    │Sensors│      │Relay  │      │Nextion │</div>
+<div class="line">    │(HC-   │      │Module │      │Display │</div>
+<div class="line">    │SR04)  │      │       │      │(UI)    │</div>
+<div class="line">    └───────┘      └───┬───┘      └────────┘</div>
+<div class="line">                       │</div>
+<div class="line">                   ┌───▼─────┐</div>
+<div class="line">                   │ Pumps   │</div>
+<div class="line">                   │(Liquid) │</div>
+<div class="line">                   └─────────┘</div>
+</div><!-- fragment --><p><b>Componentes:</b></p><ul>
+<li><b>ESP32:</b> Orquestra sensores e atuadores via FSM</li>
+<li><b>Sensores Ultrassônicos:</b> Detectam moedas e xícara</li>
+<li><b>Módulo Relé:</b> Controla ativação das bombas</li>
+<li><b>Display Nextion:</b> Interface gráfica via UART</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md50"></a>
+8. Sequence Diagram (Main Scenario)</h2>
+<div class="fragment"><div class="line">mermaid</div>
+<div class="line">sequenceDiagram</div>
+</div><!-- fragment --><p> mermaid sequenceDiagram participant U as User participant D as Nextion Display participant E as ESP32 participant S as Sensors participant P as Pump</p>
+<p>U -&gt;&gt; D: Interacts with interface S -&gt;&gt; E: Coin detected E -&gt;&gt; D: Requests cup insertion S -&gt;&gt; E: Cup detected U -&gt;&gt; D: Selects Coffee D -&gt;&gt; E: Sends command E -&gt;&gt; P: Activates coffee pump P --&gt;&gt; E: Dispensing completed E -&gt;&gt; D: Displays final message <code> </code></p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md52"></a>
+🧪 9. Technical Evaluation</h2>
+<h3><a class="anchor" id="autotoc_md53"></a>
+✔ Strengths</h3>
+<ul>
+<li>Modularity between control and interface;</li>
+<li>Detection robustness and operation cycle;</li>
+<li>Potential for IoT extension;</li>
+<li>Software pattern usage (FSM).</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md54"></a>
+⚠ Limitations</h3>
+<ul>
+<li>Lack of integration with modern payment methods;</li>
+<li>Absence of transaction logging or telemetry;</li>
+<li>Current scope limited to educational prototype.</li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md56"></a>
+📌 10. Recommendations for Evolution</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Future Improvements   </th><th class="markdownTableHeadNone">Expected Benefits    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>NFC Payment</b>   </td><td class="markdownTableBodyNone">Modernizes usage and accessibility    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Cloud Connectivity</b>   </td><td class="markdownTableBodyNone">Telemetry and consumption dashboards    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mobile App Control</b>   </td><td class="markdownTableBodyNone">Remote interaction and personalization    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Machine Learning</b>   </td><td class="markdownTableBodyNone">Stock prediction or recommendation   </td></tr>
+</table>
+<hr  />
+<h2><a class="anchor" id="autotoc_md58"></a>
+🏁 11. Conclusion</h2>
+<p>The <b>Automated Beverage Machine</b> project is a solid example of embedded systems prototyping with <b>sensory integration, reactive control, and user-friendly interface</b>. Its modular technological architecture and use of emerging technologies make it a relevant case for <b>R&amp;D&amp;I in IoT, physical automation, and advanced prototyping</b>.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md60"></a>
+📚 12. References</h2>
+<ol type="1">
+<li>Project GitHub repository: <em>PauloBelmont/maquina_de_bebidas</em> – README and code structure. (<a href="https://github.com/PauloBelmont/maquina_de_bebidas" title="GitHub - PauloBelmont/maquina_de_bebidas: Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé">GitHub</a>)</li>
+<li>Articles on ultrasonic sensors and FSM in embedded systems.</li>
+<li>Comparison with autonomous beverage machines and automation trends. (<a href="https://www.tecmundo.com.br/tecnologia/47158-10-bartenders-robos-que-fazem-drinks-tao-bem-quanto-os-humanos.htm?utm_source=chatgpt.com" title="10 bartenders robôs que fazem drinks tão bem quanto os humanos | Internet">TecMundo</a>)</li>
+</ol>
+<hr  />
+ </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

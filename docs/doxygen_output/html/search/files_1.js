@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_41',['README.md',['../da/ddd/README_8md.html',1,'']]]
+  ['literature_5fcomparison_2emd_57',['literature_comparison.md',['../de/df4/literature__comparison_8md.html',1,'']]]
 ];

@@ -1,4 +1,7 @@
 <map id="src/main.ino" name="src/main.ino">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="14,80,99,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="105,5,208,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,89,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="114,80,199,107"/>
+<area shape="rect" id="node4" href="$dc/dc2/MachineLogic_8h.html" title=" " alt="" coords="223,80,346,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="249,155,320,181"/>
 </map>
