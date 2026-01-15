@@ -1,0 +1,6 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node1" title="Configura os periféricos e inicializa o sistema." alt="" coords="5,56,64,83"/>
+<area shape="rect" id="node2" href="$dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090" title="Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café" alt="" coords="112,5,252,32"/>
+<area shape="rect" id="node3" href="$dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99" title="Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá" alt="" coords="115,56,249,83"/>
+<area shape="rect" id="node4" href="$dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="127,107,237,133"/>
+</map>
