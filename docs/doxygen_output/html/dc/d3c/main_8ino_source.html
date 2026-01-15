@@ -1,32 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.14.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Automated Coffee &amp; Tea Machine: Código-Fonte de src/main.ino</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen_custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">Automated Coffee &amp; Tea Machine<span id="projectnumber">&#160;1.0</span>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Automated Coffee &amp; Tea Machine
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">ESP32-based embedded system for hot beverage vending with Nextion HMI</div>
   </td>
@@ -35,21 +36,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.14.0 -->
+<!-- Gerado por Doxygen 1.9.1 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-</script>
-<script type="text/javascript">
-$(function() { codefold.init(); });
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar','.html');
+/* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
-  initMenu('../../',true,false,'search.php','Localizar',true);
-  $(function() { init_search(); });
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,9 +64,10 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('dc/d3c/main_8ino_source.html','../../',''); });
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dc/d3c/main_8ino_source.html','../../'); initResizable(); });
+/* @license-end */
 </script>
-<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -76,404 +78,434 @@ $(function(){initNavTree('dc/d3c/main_8ino_source.html','../../',''); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Carregando...</div>
-<div class="SRStatus" id="Searching">Procurando...</div>
-<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">main.ino</div></div>
+  <div class="headertitle">
+<div class="title">main.ino</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>#include &quot;Nextion.h&quot;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>// ============================================================</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>// DEFINIÇÕES E CONFIGURAÇÕES</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>// ============================================================</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>// Define os estados da máquina de bebidas</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>enum MachineState {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  ST_INICIO,        // Estado inicial - aguarda inicialização</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  ST_AGUARDA_MOEDA, // Aguarda inserção de moeda</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  ST_AGUARDA_COPO,  // Aguarda colocação do copo</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  ST_ESCOLHA,       // Aguarda escolha de bebida (café ou chá)</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  ST_PREPARO_CAFE,  // Preparando café - enchimento em progresso</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  ST_PREPARO_CHA,   // Preparando chá - enchimento em progresso</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  ST_FIM_CAFE,      // Café pronto - aguarda retirada do copo</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  ST_FIM_CHA        // Chá pronto - aguarda retirada do copo</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>// Estado atual da máquina</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>MachineState estadoAtual = ST_INICIO;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>// --- Configuração de Pinos do ESP32 ---</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>// Sensores ultrassônicos para detecção de moeda</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>const uint8_t PIN_MOEDA_TRIG = 32;  // Pino de trigger (saída)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>const uint8_t PIN_MOEDA_ECHO = 33;  // Pino de echo (entrada)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>// Sensores ultrassônicos para detecção de copo</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>const uint8_t PIN_COPO_TRIG  = 19;  // Pino de trigger (saída)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>const uint8_t PIN_COPO_ECHO  = 18;  // Pino de echo (entrada)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>// Relés para controle dos motores de bomba</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>const uint8_t PIN_RELE_CAFE  = 25;  // Relé do motor de café</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>const uint8_t PIN_RELE_CHA   = 26;  // Relé do motor de chá</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>// Flag para lógica de ativação de relés (true = ativo em nível LOW)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>const bool RELE_ATIVO_BAIXO = true;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>// ============================================================</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>// OBJETOS DA TELA NEXTION</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>// ============================================================</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>// Páginas da interface HMI</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>NexPage page_initial    = NexPage(0, 0, &quot;page_initial&quot;);   // Página inicial</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>NexPage page_moeda      = NexPage(1, 0, &quot;page_moeda&quot;);     // Aguardando moeda</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>NexPage page_in_copo    = NexPage(2, 0, &quot;page_in_copo&quot;);   // Aguardando copo</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>NexPage page_escolha    = NexPage(3, 0, &quot;page_escolha&quot;);   // Escolha de bebida</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>NexPage page_cafe       = NexPage(4, 0, &quot;page_cafe&quot;);      // Preparando café</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>NexPage page_cha        = NexPage(5, 0, &quot;page_cha&quot;);       // Preparando chá</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>NexPage page_fim_cafe   = NexPage(6, 0, &quot;page_fim_cafe&quot;);  // Café pronto</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>NexPage page_fim_cha    = NexPage(7, 0, &quot;page_fim_cha&quot;);   // Chá pronto</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>// Botões da tela de escolha</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>NexButton bCafe         = NexButton(3, 2, &quot;bCafe&quot;);  // Botão selecionar café</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>NexButton bCha          = NexButton(3, 3, &quot;bCha&quot;);   // Botão selecionar chá</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>// Barras de progresso para visualizar enchimento</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>NexProgressBar bar_cafe = NexProgressBar(4, 2, &quot;j0&quot;);  // Progresso do café</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>NexProgressBar bar_cha  = NexProgressBar(5, 2, &quot;j0&quot;);  // Progresso do chá</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>// Lista de objetos que disparam eventos ao Nextion</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>NexTouch *nex_listen_list[] = {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  &amp;bCafe,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  &amp;bCha,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  NULL</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>// ============================================================</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>// FUNÇÕES AUXILIARES</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>// ============================================================</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>/**</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> * Lê a distância em milímetros usando sensor ultrassônico HC-SR04</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> * </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> * @param pinTrig - Pino de trigger (disparo do pulso)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> * @param pinEcho - Pino de echo (recepção da reflexão)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> * @return Distância em milímetros (sem uso de float para economizar memória)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> * </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> * Fórmula: (Duração * 10) / 58 = Distância em mm</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> * (Equivalente a dividir por 5.8 usando apenas operações inteiras)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> */</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>int lerDistanciaMM(uint8_t pinTrig, uint8_t pinEcho) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  digitalWrite(pinTrig, LOW);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  delayMicroseconds(2);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  digitalWrite(pinTrig, HIGH);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  delayMicroseconds(10);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  digitalWrite(pinTrig, LOW);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  // Aguarda o retorno do sinal (timeout de 30ms = ~5 metros)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  long duracao = pulseIn(pinEcho, HIGH, 30000);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  // Converte duração em milímetros (sem uso de float)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  return (int)((duracao * 10) / 58);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>/**</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> * Controla o estado de um relé (ligar/desligar motor)</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> * </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> * @param pino - Pino do relé (GPIO)</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> * @param ligar - true para ligar, false para desligar</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> * </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> * Nota: A lógica XOR (^) com RELE_ATIVO_BAIXO inverte o sinal se necessário</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> */</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>void controlarRele(uint8_t pino, bool ligar) {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  int nivelLogico = (RELE_ATIVO_BAIXO ^ ligar) ? HIGH : LOW;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  digitalWrite(pino, nivelLogico);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>// ============================================================</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>// CALLBACKS NEXTION (Interrupções de eventos)</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>// ============================================================</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>/**</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> * Callback disparado quando o botão de café é pressionado</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> * Altera o estado da máquina para preparar café</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> */</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>void bCafePopCallback(void *ptr) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  estadoAtual = ST_PREPARO_CAFE;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>/**</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> * Callback disparado quando o botão de chá é pressionado</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> * Altera o estado da máquina para preparar chá</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> */</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>void bChaPopCallback(void *ptr) {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  estadoAtual = ST_PREPARO_CHA;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>// ============================================================</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>// LÓGICA DE NEGÓCIO</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>// ============================================================</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>/**</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> * Processa o enchimento de bebida com monitor de copo</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> * </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> * Responsabilidades:</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> * - Controla o motor da bomba</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> * - Incrementa a barra de progresso</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> * - Detecta remoção do copo durante o processo</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> * - Pausa e retoma automaticamente se copo for recolocado</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> * </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> * @param barra - Referência à barra de progresso Nextion</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> * @param pinoMotor - Pino do relé do motor (CAFE ou CHA)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> */</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>void processarEnchimento(NexProgressBar &amp;barra, uint8_t pinoMotor) {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  int progresso = 0;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  barra.setValue(0);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  unsigned long tempoInicio = millis();</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  unsigned long ultAtualizacao = millis();</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  // Constantes de timing (em milissegundos)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  const unsigned long DURACAO_TOTAL = 26000;         // Duração total de enchimento</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  const unsigned long TIMEOUT_SEM_COPO = 10000;      // Tempo máximo sem copo detectado</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  const unsigned long INTERVALO_INCREMENTO = 1000;   // Intervalo para incrementar barra</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  bool processoAtivo = true;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  Serial.println(F(&quot;Iniciando processo de enchimento...&quot;));</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  while (processoAtivo &amp;&amp; progresso &lt; 100) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    // Processa eventos da tela Nextion</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    nexLoop(nex_listen_list);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    // Timeout geral (evita travamento)</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    if (millis() - tempoInicio &gt; (DURACAO_TOTAL + TIMEOUT_SEM_COPO + 5000)) {</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>       processoAtivo = false;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>       break;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    // Lê distância do copo</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    int distMM = lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    Serial.print(&quot;Distancia: &quot;);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    Serial.println(distMM);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    // --- Lógica de Detecção de Copo (62mm ≈ 6.2cm) ---</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    if (distMM &lt;= 62) {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      // Copo detectado</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      delay(1000);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      controlarRele(pinoMotor, true);  // Liga o motor</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      // Incrementa barra a cada 1 segundo</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      if (millis() - ultAtualizacao &gt;= INTERVALO_INCREMENTO) {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        progresso += 4;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        if (progresso &gt; 100) progresso = 100;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        barra.setValue(progresso);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        ultAtualizacao = millis();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        Serial.print(F(&quot;Dist: &quot;)); Serial.print(distMM); </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        Serial.print(F(&quot;mm - Progresso: &quot;)); Serial.println(progresso);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    } </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    else {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      // Copo removido - pausa o enchimento</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      controlarRele(pinoMotor, false);  // Desliga o motor</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      // Aguarda recolocação do copo por até TIMEOUT_SEM_COPO ms</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      unsigned long inicioPausa = millis();</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      bool copoVoltou = false;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      while (millis() - inicioPausa &lt; TIMEOUT_SEM_COPO) {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        int d = lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        Serial.print(&quot;Aguardando copo: &quot;);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        Serial.println(d);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        if (d &lt;= 60) {</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          copoVoltou = true;  // Copo foi recolocado</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          break; </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        }</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        delay(50);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      }</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      // Se copo não retornou, encerra o processo</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      if (!copoVoltou) {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        processoAtivo = false;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  }</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  // Garante que o motor seja desligado ao final</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  controlarRele(pinoMotor, false);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>// ============================================================</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>// INICIALIZAÇÃO (SETUP)</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>// ============================================================</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>/**</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> * Configura os periféricos e inicializa o sistema</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> * - Abre comunicação serial</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> * - Inicializa display Nextion</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> * - Registra callbacks dos botões</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> * - Configura pinos GPIO</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> * - Desliga relés inicialmente</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> */</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>void setup(void) {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  // Serial para debug (monitor serial)</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  Serial.begin(115200);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  // Serial2 para comunicação com display Nextion (HMI)</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  Serial2.begin(115200, SERIAL_8N1, 16, 17);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  // Inicializa display Nextion</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  nexInit();</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  // Registra callbacks para interação com botões</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  bCafe.attachPop(bCafePopCallback, &amp;bCafe);</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  bCha.attachPop(bChaPopCallback, &amp;bCha);</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  // Configura pinos dos sensores ultrassônicos</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  pinMode(PIN_MOEDA_TRIG, OUTPUT);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  pinMode(PIN_MOEDA_ECHO, INPUT);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  pinMode(PIN_COPO_TRIG, OUTPUT);</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  pinMode(PIN_COPO_ECHO, INPUT);</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  // Configura pinos dos relés como saídas</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  pinMode(PIN_RELE_CAFE, OUTPUT);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  pinMode(PIN_RELE_CHA, OUTPUT);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  // Desliga todos os relés por segurança</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  controlarRele(PIN_RELE_CAFE, false);</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  controlarRele(PIN_RELE_CHA, false);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  // Exibe página inicial no display</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  page_initial.show();</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  Serial.println(F(&quot;Sistema Iniciado (Sensor em MM)&quot;));</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>// ============================================================</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>// LOOP PRINCIPAL</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>// ============================================================</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>/**</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> * Máquina de estados principal</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> * Gerencia as transições entre os diferentes estados da máquina de bebidas</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> */</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>void loop(void) {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  // Processa eventos da tela Nextion em todos os estados</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  nexLoop(nex_listen_list);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  switch (estadoAtual) {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    case ST_INICIO:</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>      // Aguarda 2 segundos e passa para detecção de moeda</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      delay(2000);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      estadoAtual = ST_AGUARDA_MOEDA;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      break;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    case ST_AGUARDA_MOEDA:</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      // Mostra página de aguardar moeda</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      page_moeda.show();</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      // Aguarda detecção de moeda (distância &lt; 25mm)</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      while(true) {</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        nexLoop(nex_listen_list);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        int distMM = lerDistanciaMM(PIN_MOEDA_TRIG, PIN_MOEDA_ECHO);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        Serial.print(&quot;Distancia moeda: &quot;);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        Serial.println(distMM);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        // Moeda detectada quando distância &lt; 25mm (2.5cm)</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        if (distMM &lt; 25) {</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>          delay(500);  // Debounce</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>          break;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        }</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        delay(50);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      estadoAtual = ST_AGUARDA_COPO;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>      break;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    case ST_AGUARDA_COPO:</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      // Mostra página de aguardar colocação do copo</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      page_in_copo.show();</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>      // Aguarda copo dentro da faixa de detecção (20-60mm)</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      while(true) {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        nexLoop(nex_listen_list);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        int distMM = lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        Serial.print(&quot;Distancia copo: &quot;);</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        Serial.println(distMM);</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        // Copo detectado quando 20mm &lt; distância &lt;= 60mm</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        if (distMM &gt; 20 &amp;&amp; distMM &lt;= 60) break;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        delay(100);</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      }</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      estadoAtual = ST_ESCOLHA;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      break;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    case ST_ESCOLHA:</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      // Mostra tela de escolha (café ou chá)</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      page_escolha.show();</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      // Aguarda escolha do usuário (callbacks atualizarão estadoAtual)</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      while(estadoAtual == ST_ESCOLHA) {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        nexLoop(nex_listen_list);</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        delay(50);</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      }</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      break;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    case ST_PREPARO_CAFE:</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      // Mostra tela de preparo e inicia enchimento de café</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      page_cafe.show();</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      processarEnchimento(bar_cafe, PIN_RELE_CAFE);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      estadoAtual = ST_FIM_CAFE;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      break;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    case ST_PREPARO_CHA:</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      // Mostra tela de preparo e inicia enchimento de chá</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      page_cha.show();</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      processarEnchimento(bar_cha, PIN_RELE_CHA);</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      estadoAtual = ST_FIM_CHA;</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      break;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    case ST_FIM_CAFE:</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      // Café pronto - aguarda retirada do copo</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      page_fim_cafe.show();</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      while(lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO) &lt;= 50) {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        delay(200);  // Verifica a cada 200ms</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>      }</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      delay(2000);  // Aguarda 2 segundos adicionais</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>      estadoAtual = ST_AGUARDA_MOEDA;  // Volta para início do ciclo</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>      break;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    case ST_FIM_CHA:</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      // Chá pronto - aguarda retirada do copo</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      page_fim_cha.show();</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      while(lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO) &lt;= 50) {</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        delay(200);  // Verifica a cada 200ms</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      }</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      delay(2000);  // Aguarda 2 segundos adicionais</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>      estadoAtual = ST_AGUARDA_MOEDA;  // Volta para início do ciclo</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>      break;</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  }</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>}</div>
+<a href="../../dc/d3c/main_8ino.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Nextion.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// DEFINIÇÕES E CONFIGURAÇÕES</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Define os estados da máquina de bebidas</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">    7</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">    8</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a>,        <span class="comment">// Estado inicial - aguarda inicialização</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">    9</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a>, <span class="comment">// Aguarda inserção de moeda</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb">   10</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb">ST_AGUARDA_COPO</a>,  <span class="comment">// Aguarda colocação do copo</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">   11</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">ST_ESCOLHA</a>,       <span class="comment">// Aguarda escolha de bebida (café ou chá)</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f">   12</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f">ST_PREPARO_CAFE</a>,  <span class="comment">// Preparando café - enchimento em progresso</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c">   13</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c">ST_PREPARO_CHA</a>,   <span class="comment">// Preparando chá - enchimento em progresso</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1">   14</a></span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1">ST_FIM_CAFE</a>,      <span class="comment">// Café pronto - aguarda retirada do copo</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8">ST_FIM_CHA</a>        <span class="comment">// Chá pronto - aguarda retirada do copo</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8">   16</a></span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Estado atual da máquina</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">   19</a></span>&#160;<a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a> <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// --- Configuração de Pinos do ESP32 ---</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Sensores ultrassônicos para detecção de moeda</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a568e357b49d602ea37998d8b5feb3484">   23</a></span>&#160;<span class="keyword">const</span> uint8_t <a class="code" href="../../dc/d3c/main_8ino.html#a568e357b49d602ea37998d8b5feb3484">PIN_MOEDA_TRIG</a> = 32;  <span class="comment">// Pino de trigger (saída)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a7f80ea1b6e40f4b7d5f3274fe1bd4966">   24</a></span>&#160;<span class="keyword">const</span> uint8_t <a class="code" href="../../dc/d3c/main_8ino.html#a7f80ea1b6e40f4b7d5f3274fe1bd4966">PIN_MOEDA_ECHO</a> = 33;  <span class="comment">// Pino de echo (entrada)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Sensores ultrassônicos para detecção de copo</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">   27</a></span>&#160;<span class="keyword">const</span> uint8_t <a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>  = 19;  <span class="comment">// Pino de trigger (saída)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">   28</a></span>&#160;<span class="keyword">const</span> uint8_t <a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>  = 18;  <span class="comment">// Pino de echo (entrada)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Relés para controle dos motores de bomba</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">   31</a></span>&#160;<span class="keyword">const</span> uint8_t <a class="code" href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">PIN_RELE_CAFE</a>  = 25;  <span class="comment">// Relé do motor de café</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">   32</a></span>&#160;<span class="keyword">const</span> uint8_t <a class="code" href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">PIN_RELE_CHA</a>   = 26;  <span class="comment">// Relé do motor de chá</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Flag para lógica de ativação de relés (true = ativo em nível LOW)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#abc337f391db256fbbff8b18b634d1515">   35</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="../../dc/d3c/main_8ino.html#abc337f391db256fbbff8b18b634d1515">RELE_ATIVO_BAIXO</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// OBJETOS DA TELA NEXTION</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// Páginas da interface HMI</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a7f9108863a47d2b10d62111278015399">   41</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#a7f9108863a47d2b10d62111278015399">page_initial</a>    = NexPage(0, 0, <span class="stringliteral">&quot;page_initial&quot;</span>);   <span class="comment">// Página inicial</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#ad79cc855cd4d56eae7f6ca8560b2e1de">   42</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#ad79cc855cd4d56eae7f6ca8560b2e1de">page_moeda</a>      = NexPage(1, 0, <span class="stringliteral">&quot;page_moeda&quot;</span>);     <span class="comment">// Aguardando moeda</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a9f958d95ead8e24a6aff89b50cd7c767">   43</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#a9f958d95ead8e24a6aff89b50cd7c767">page_in_copo</a>    = NexPage(2, 0, <span class="stringliteral">&quot;page_in_copo&quot;</span>);   <span class="comment">// Aguardando copo</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a63ef588755b6e9c1b8afaa1d715668ce">   44</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#a63ef588755b6e9c1b8afaa1d715668ce">page_escolha</a>    = NexPage(3, 0, <span class="stringliteral">&quot;page_escolha&quot;</span>);   <span class="comment">// Escolha de bebida</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#aa0c15f8189d8f9812bbbe2be76398a0b">   45</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#aa0c15f8189d8f9812bbbe2be76398a0b">page_cafe</a>       = NexPage(4, 0, <span class="stringliteral">&quot;page_cafe&quot;</span>);      <span class="comment">// Preparando café</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#aa01f4902c70ffbe79064aec10c3d3e3f">   46</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#aa01f4902c70ffbe79064aec10c3d3e3f">page_cha</a>        = NexPage(5, 0, <span class="stringliteral">&quot;page_cha&quot;</span>);       <span class="comment">// Preparando chá</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#ad7a520681625acbdf67cdb3ce1c1ca31">   47</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#ad7a520681625acbdf67cdb3ce1c1ca31">page_fim_cafe</a>   = NexPage(6, 0, <span class="stringliteral">&quot;page_fim_cafe&quot;</span>);  <span class="comment">// Café pronto</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#ab89c744219dd775d6a159b3f252ef2b1">   48</a></span>&#160;NexPage <a class="code" href="../../dc/d3c/main_8ino.html#ab89c744219dd775d6a159b3f252ef2b1">page_fim_cha</a>    = NexPage(7, 0, <span class="stringliteral">&quot;page_fim_cha&quot;</span>);   <span class="comment">// Chá pronto</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// Botões da tela de escolha</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">   51</a></span>&#160;NexButton <a class="code" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a>         = NexButton(3, 2, <span class="stringliteral">&quot;bCafe&quot;</span>);  <span class="comment">// Botão selecionar café</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">   52</a></span>&#160;NexButton <a class="code" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a>          = NexButton(3, 3, <span class="stringliteral">&quot;bCha&quot;</span>);   <span class="comment">// Botão selecionar chá</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// Barras de progresso para visualizar enchimento</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a7649e4d5329d131b09fd4e07dfc54c35">   55</a></span>&#160;NexProgressBar <a class="code" href="../../dc/d3c/main_8ino.html#a7649e4d5329d131b09fd4e07dfc54c35">bar_cafe</a> = NexProgressBar(4, 2, <span class="stringliteral">&quot;j0&quot;</span>);  <span class="comment">// Progresso do café</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a8369375d4d84ed1fb304ed1ae4babc5e">   56</a></span>&#160;NexProgressBar <a class="code" href="../../dc/d3c/main_8ino.html#a8369375d4d84ed1fb304ed1ae4babc5e">bar_cha</a>  = NexProgressBar(5, 2, <span class="stringliteral">&quot;j0&quot;</span>);  <span class="comment">// Progresso do chá</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// Lista de objetos que disparam eventos ao Nextion</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">   59</a></span>&#160;NexTouch *<a class="code" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a>[] = {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  NULL</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// FUNÇÕES AUXILIARES</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> * Lê a distância em milímetros usando sensor ultrassônico HC-SR04</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * @param pinTrig - Pino de trigger (disparo do pulso)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> * @param pinEcho - Pino de echo (recepção da reflexão)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> * @return Distância em milímetros (sem uso de float para economizar memória)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * Fórmula: (Duração * 10) / 58 = Distância em mm</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> * (Equivalente a dividir por 5.8 usando apenas operações inteiras)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">   79</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(uint8_t pinTrig, uint8_t pinEcho) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  digitalWrite(pinTrig, LOW);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  delayMicroseconds(2);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  digitalWrite(pinTrig, HIGH);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  delayMicroseconds(10);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  digitalWrite(pinTrig, LOW);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">// Aguarda o retorno do sinal (timeout de 30ms = ~5 metros)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">long</span> duracao = pulseIn(pinEcho, HIGH, 30000);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// Converte duração em milímetros (sem uso de float)</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((duracao * 10) / 58);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * Controla o estado de um relé (ligar/desligar motor)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> * @param pino - Pino do relé (GPIO)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> * @param ligar - true para ligar, false para desligar</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> * Nota: A lógica XOR (^) com RELE_ATIVO_BAIXO inverte o sinal se necessário</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a>(uint8_t pino, <span class="keywordtype">bool</span> ligar) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">int</span> nivelLogico = (<a class="code" href="../../dc/d3c/main_8ino.html#abc337f391db256fbbff8b18b634d1515">RELE_ATIVO_BAIXO</a> ^ ligar) ? HIGH : LOW;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  digitalWrite(pino, nivelLogico);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">// CALLBACKS NEXTION (Interrupções de eventos)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> * Callback disparado quando o botão de café é pressionado</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> * Altera o estado da máquina para preparar café</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090">bCafePopCallback</a>(<span class="keywordtype">void</span> *ptr) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f">ST_PREPARO_CAFE</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"> * Callback disparado quando o botão de chá é pressionado</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> * Altera o estado da máquina para preparar chá</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99">  122</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99">bChaPopCallback</a>(<span class="keywordtype">void</span> *ptr) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c">ST_PREPARO_CHA</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">// LÓGICA DE NEGÓCIO</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * Processa o enchimento de bebida com monitor de copo</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"> * Responsabilidades:</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> * - Controla o motor da bomba</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> * - Incrementa a barra de progresso</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"> * - Detecta remoção do copo durante o processo</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * - Pausa e retoma automaticamente se copo for recolocado</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"> * @param barra - Referência à barra de progresso Nextion</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"> * @param pinoMotor - Pino do relé do motor (CAFE ou CHA)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">  142</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">processarEnchimento</a>(NexProgressBar &amp;barra, uint8_t pinoMotor) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">int</span> progresso = 0;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  barra.setValue(0);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> tempoInicio = millis();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ultAtualizacao = millis();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="comment">// Constantes de timing (em milissegundos)</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> DURACAO_TOTAL = 26000;         <span class="comment">// Duração total de enchimento</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> TIMEOUT_SEM_COPO = 10000;      <span class="comment">// Tempo máximo sem copo detectado</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> INTERVALO_INCREMENTO = 1000;   <span class="comment">// Intervalo para incrementar barra</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">bool</span> processoAtivo = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  Serial.println(F(<span class="stringliteral">&quot;Iniciando processo de enchimento...&quot;</span>));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">while</span> (processoAtivo &amp;&amp; progresso &lt; 100) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">// Processa eventos da tela Nextion</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    nexLoop(<a class="code" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// Timeout geral (evita travamento)</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (millis() - tempoInicio &gt; (DURACAO_TOTAL + TIMEOUT_SEM_COPO + 5000)) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;       processoAtivo = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;       <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// Lê distância do copo</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> distMM = <a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>, <a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Serial.print(<span class="stringliteral">&quot;Distancia: &quot;</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    Serial.println(distMM);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">// --- Lógica de Detecção de Copo (62mm ≈ 6.2cm) ---</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (distMM &lt;= 62) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="comment">// Copo detectado</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      delay(1000);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a>(pinoMotor, <span class="keyword">true</span>);  <span class="comment">// Liga o motor</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="comment">// Incrementa barra a cada 1 segundo</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordflow">if</span> (millis() - ultAtualizacao &gt;= INTERVALO_INCREMENTO) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        progresso += 4;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (progresso &gt; 100) progresso = 100;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        barra.setValue(progresso);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        ultAtualizacao = millis();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        Serial.print(F(<span class="stringliteral">&quot;Dist: &quot;</span>)); Serial.print(distMM); </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        Serial.print(F(<span class="stringliteral">&quot;mm - Progresso: &quot;</span>)); Serial.println(progresso);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    } </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="comment">// Copo removido - pausa o enchimento</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a>(pinoMotor, <span class="keyword">false</span>);  <span class="comment">// Desliga o motor</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="comment">// Aguarda recolocação do copo por até TIMEOUT_SEM_COPO ms</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> inicioPausa = millis();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordtype">bool</span> copoVoltou = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">while</span> (millis() - inicioPausa &lt; TIMEOUT_SEM_COPO) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordtype">int</span> d = <a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>, <a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        Serial.print(<span class="stringliteral">&quot;Aguardando copo: &quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        Serial.println(d);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> (d &lt;= 60) {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;          copoVoltou = <span class="keyword">true</span>;  <span class="comment">// Copo foi recolocado</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;          <span class="keywordflow">break</span>; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        delay(50);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="comment">// Se copo não retornou, encerra o processo</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keywordflow">if</span> (!copoVoltou) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        processoAtivo = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="comment">// Garante que o motor seja desligado ao final</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a>(pinoMotor, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">// INICIALIZAÇÃO (SETUP)</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"> * Configura os periféricos e inicializa o sistema</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"> * - Abre comunicação serial</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> * - Inicializa display Nextion</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"> * - Registra callbacks dos botões</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment"> * - Configura pinos GPIO</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment"> * - Desliga relés inicialmente</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f">  236</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f">setup</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">// Serial para debug (monitor serial)</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  Serial.begin(115200);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">// Serial2 para comunicação com display Nextion (HMI)</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  Serial2.begin(115200, SERIAL_8N1, 16, 17);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="comment">// Inicializa display Nextion</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  nexInit();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="comment">// Registra callbacks para interação com botões</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a>.attachPop(<a class="code" href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090">bCafePopCallback</a>, &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a>.attachPop(<a class="code" href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99">bChaPopCallback</a>, &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">// Configura pinos dos sensores ultrassônicos</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  pinMode(<a class="code" href="../../dc/d3c/main_8ino.html#a568e357b49d602ea37998d8b5feb3484">PIN_MOEDA_TRIG</a>, OUTPUT);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  pinMode(<a class="code" href="../../dc/d3c/main_8ino.html#a7f80ea1b6e40f4b7d5f3274fe1bd4966">PIN_MOEDA_ECHO</a>, INPUT);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  pinMode(<a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>, OUTPUT);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  pinMode(<a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>, INPUT);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// Configura pinos dos relés como saídas</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  pinMode(<a class="code" href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">PIN_RELE_CAFE</a>, OUTPUT);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  pinMode(<a class="code" href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">PIN_RELE_CHA</a>, OUTPUT);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="comment">// Desliga todos os relés por segurança</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a>(<a class="code" href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">PIN_RELE_CAFE</a>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">PIN_RELE_CHA</a>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="comment">// Exibe página inicial no display</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="../../dc/d3c/main_8ino.html#a7f9108863a47d2b10d62111278015399">page_initial</a>.show();</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  Serial.println(F(<span class="stringliteral">&quot;Sistema Iniciado (Sensor em MM)&quot;</span>));</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">// LOOP PRINCIPAL</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">// ============================================================</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment"> * Máquina de estados principal</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment"> * Gerencia as transições entre os diferentes estados da máquina de bebidas</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f">  277</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f">loop</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="comment">// Processa eventos da tela Nextion em todos os estados</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  nexLoop(<a class="code" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a>) {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a>:</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="comment">// Aguarda 2 segundos e passa para detecção de moeda</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      delay(2000);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a>:</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="comment">// Mostra página de aguardar moeda</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ad79cc855cd4d56eae7f6ca8560b2e1de">page_moeda</a>.show();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="comment">// Aguarda detecção de moeda (distância &lt; 25mm)</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        nexLoop(<a class="code" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordtype">int</span> distMM = <a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a568e357b49d602ea37998d8b5feb3484">PIN_MOEDA_TRIG</a>, <a class="code" href="../../dc/d3c/main_8ino.html#a7f80ea1b6e40f4b7d5f3274fe1bd4966">PIN_MOEDA_ECHO</a>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        Serial.print(<span class="stringliteral">&quot;Distancia moeda: &quot;</span>);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        Serial.println(distMM);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="comment">// Moeda detectada quando distância &lt; 25mm (2.5cm)</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">if</span> (distMM &lt; 25) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          delay(500);  <span class="comment">// Debounce</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        delay(50);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb">ST_AGUARDA_COPO</a>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb">ST_AGUARDA_COPO</a>:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="comment">// Mostra página de aguardar colocação do copo</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#a9f958d95ead8e24a6aff89b50cd7c767">page_in_copo</a>.show();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      <span class="comment">// Aguarda copo dentro da faixa de detecção (20-60mm)</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        nexLoop(<a class="code" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a>);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordtype">int</span> distMM = <a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>, <a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        Serial.print(<span class="stringliteral">&quot;Distancia copo: &quot;</span>);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        Serial.println(distMM);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">// Copo detectado quando 20mm &lt; distância &lt;= 60mm</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">if</span> (distMM &gt; 20 &amp;&amp; distMM &lt;= 60) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        delay(100);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">ST_ESCOLHA</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">ST_ESCOLHA</a>:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="comment">// Mostra tela de escolha (café ou chá)</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#a63ef588755b6e9c1b8afaa1d715668ce">page_escolha</a>.show();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      <span class="comment">// Aguarda escolha do usuário (callbacks atualizarão estadoAtual)</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <span class="keywordflow">while</span>(<a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> == <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">ST_ESCOLHA</a>) {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        nexLoop(<a class="code" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a>);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        delay(50);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f">ST_PREPARO_CAFE</a>:</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      <span class="comment">// Mostra tela de preparo e inicia enchimento de café</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#aa0c15f8189d8f9812bbbe2be76398a0b">page_cafe</a>.show();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">processarEnchimento</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a7649e4d5329d131b09fd4e07dfc54c35">bar_cafe</a>, <a class="code" href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">PIN_RELE_CAFE</a>);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1">ST_FIM_CAFE</a>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c">ST_PREPARO_CHA</a>:</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="comment">// Mostra tela de preparo e inicia enchimento de chá</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#aa01f4902c70ffbe79064aec10c3d3e3f">page_cha</a>.show();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">processarEnchimento</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a8369375d4d84ed1fb304ed1ae4babc5e">bar_cha</a>, <a class="code" href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">PIN_RELE_CHA</a>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8">ST_FIM_CHA</a>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1">ST_FIM_CAFE</a>:</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="comment">// Café pronto - aguarda retirada do copo</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ad7a520681625acbdf67cdb3ce1c1ca31">page_fim_cafe</a>.show();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      <span class="keywordflow">while</span>(<a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>, <a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>) &lt;= 50) {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        delay(200);  <span class="comment">// Verifica a cada 200ms</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      delay(2000);  <span class="comment">// Aguarda 2 segundos adicionais</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a>;  <span class="comment">// Volta para início do ciclo</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8">ST_FIM_CHA</a>:</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      <span class="comment">// Chá pronto - aguarda retirada do copo</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab89c744219dd775d6a159b3f252ef2b1">page_fim_cha</a>.show();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordflow">while</span>(<a class="code" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a>(<a class="code" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a>, <a class="code" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a>) &lt;= 50) {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        delay(200);  <span class="comment">// Verifica a cada 200ms</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      delay(2000);  <span class="comment">// Aguarda 2 segundos adicionais</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <a class="code" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="code" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a>;  <span class="comment">// Volta para início do ciclo</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div>
+<div class="ttc" id="amain_8ino_html_a0b33edabd7f1c4e4a0bf32c67269be2f"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f">loop</a></div><div class="ttdeci">void loop(void)</div><div class="ttdoc">Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas...</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00277">main.ino:277</a></div></div>
+<div class="ttc" id="amain_8ino_html_a0d2a5c6c8bb0ea2883e97b64464dd5cb"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a></div><div class="ttdeci">void controlarRele(uint8_t pino, bool ligar)</div><div class="ttdoc">Controla o estado de um relé (ligar/desligar motor)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00101">main.ino:101</a></div></div>
+<div class="ttc" id="amain_8ino_html_a27bed14a86e4ee183f4d06d11e27572c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a></div><div class="ttdeci">NexButton bCha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00052">main.ino:52</a></div></div>
+<div class="ttc" id="amain_8ino_html_a388ef866b82a2c2802dd4bdaf179ab7c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a></div><div class="ttdeci">NexButton bCafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00051">main.ino:51</a></div></div>
+<div class="ttc" id="amain_8ino_html_a46bafc5ad318315f3e892cbdc9c14f15"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a></div><div class="ttdeci">int lerDistanciaMM(uint8_t pinTrig, uint8_t pinEcho)</div><div class="ttdoc">Lê a distância em milímetros usando sensor ultrassônico HC-SR04.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00079">main.ino:79</a></div></div>
+<div class="ttc" id="amain_8ino_html_a568e357b49d602ea37998d8b5feb3484"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a568e357b49d602ea37998d8b5feb3484">PIN_MOEDA_TRIG</a></div><div class="ttdeci">const uint8_t PIN_MOEDA_TRIG</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00023">main.ino:23</a></div></div>
+<div class="ttc" id="amain_8ino_html_a63ef588755b6e9c1b8afaa1d715668ce"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a63ef588755b6e9c1b8afaa1d715668ce">page_escolha</a></div><div class="ttdeci">NexPage page_escolha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00044">main.ino:44</a></div></div>
+<div class="ttc" id="amain_8ino_html_a66464ba55c33a9db8909bd7b5f09abd4"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">PIN_RELE_CHA</a></div><div class="ttdeci">const uint8_t PIN_RELE_CHA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00032">main.ino:32</a></div></div>
+<div class="ttc" id="amain_8ino_html_a695a72bce78a64392b41eee5e0cd4090"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090">bCafePopCallback</a></div><div class="ttdeci">void bCafePopCallback(void *ptr)</div><div class="ttdoc">Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00114">main.ino:114</a></div></div>
+<div class="ttc" id="amain_8ino_html_a7649e4d5329d131b09fd4e07dfc54c35"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a7649e4d5329d131b09fd4e07dfc54c35">bar_cafe</a></div><div class="ttdeci">NexProgressBar bar_cafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00055">main.ino:55</a></div></div>
+<div class="ttc" id="amain_8ino_html_a7dfd9b79bc5a37d7df40207afbc5431f"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f">setup</a></div><div class="ttdeci">void setup(void)</div><div class="ttdoc">Configura os periféricos e inicializa o sistema.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00236">main.ino:236</a></div></div>
+<div class="ttc" id="amain_8ino_html_a7f80ea1b6e40f4b7d5f3274fe1bd4966"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a7f80ea1b6e40f4b7d5f3274fe1bd4966">PIN_MOEDA_ECHO</a></div><div class="ttdeci">const uint8_t PIN_MOEDA_ECHO</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00024">main.ino:24</a></div></div>
+<div class="ttc" id="amain_8ino_html_a7f9108863a47d2b10d62111278015399"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a7f9108863a47d2b10d62111278015399">page_initial</a></div><div class="ttdeci">NexPage page_initial</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00041">main.ino:41</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eb"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a></div><div class="ttdeci">MachineState</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00007">main.ino:7</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f">ST_PREPARO_CAFE</a></div><div class="ttdeci">@ ST_PREPARO_CAFE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00012">main.ino:12</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a></div><div class="ttdeci">@ ST_AGUARDA_MOEDA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00009">main.ino:9</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8">ST_FIM_CHA</a></div><div class="ttdeci">@ ST_FIM_CHA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00016">main.ino:15</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb">ST_AGUARDA_COPO</a></div><div class="ttdeci">@ ST_AGUARDA_COPO</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00010">main.ino:10</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a></div><div class="ttdeci">@ ST_INICIO</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00008">main.ino:8</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">ST_ESCOLHA</a></div><div class="ttdeci">@ ST_ESCOLHA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00011">main.ino:11</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1">ST_FIM_CAFE</a></div><div class="ttdeci">@ ST_FIM_CAFE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00014">main.ino:14</a></div></div>
+<div class="ttc" id="amain_8ino_html_a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c">ST_PREPARO_CHA</a></div><div class="ttdeci">@ ST_PREPARO_CHA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00013">main.ino:13</a></div></div>
+<div class="ttc" id="amain_8ino_html_a82fea8480d019d7fabb45dd755490d99"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99">bChaPopCallback</a></div><div class="ttdeci">void bChaPopCallback(void *ptr)</div><div class="ttdoc">Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00122">main.ino:122</a></div></div>
+<div class="ttc" id="amain_8ino_html_a8369375d4d84ed1fb304ed1ae4babc5e"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a8369375d4d84ed1fb304ed1ae4babc5e">bar_cha</a></div><div class="ttdeci">NexProgressBar bar_cha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00056">main.ino:56</a></div></div>
+<div class="ttc" id="amain_8ino_html_a8f8625e881f6750b8744b9473e7ada53"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a></div><div class="ttdeci">NexTouch * nex_listen_list[]</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00059">main.ino:59</a></div></div>
+<div class="ttc" id="amain_8ino_html_a991194834ca14ea27858a7ecd0a920b9"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a></div><div class="ttdeci">const uint8_t PIN_COPO_TRIG</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00027">main.ino:27</a></div></div>
+<div class="ttc" id="amain_8ino_html_a9f958d95ead8e24a6aff89b50cd7c767"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a9f958d95ead8e24a6aff89b50cd7c767">page_in_copo</a></div><div class="ttdeci">NexPage page_in_copo</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00043">main.ino:43</a></div></div>
+<div class="ttc" id="amain_8ino_html_aa01f4902c70ffbe79064aec10c3d3e3f"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#aa01f4902c70ffbe79064aec10c3d3e3f">page_cha</a></div><div class="ttdeci">NexPage page_cha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00046">main.ino:46</a></div></div>
+<div class="ttc" id="amain_8ino_html_aa0c15f8189d8f9812bbbe2be76398a0b"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#aa0c15f8189d8f9812bbbe2be76398a0b">page_cafe</a></div><div class="ttdeci">NexPage page_cafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00045">main.ino:45</a></div></div>
+<div class="ttc" id="amain_8ino_html_aa921421d435cf605148dcfcdc8c0f93c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">PIN_RELE_CAFE</a></div><div class="ttdeci">const uint8_t PIN_RELE_CAFE</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00031">main.ino:31</a></div></div>
+<div class="ttc" id="amain_8ino_html_aad575b89e08082dff17682db81ffe73a"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a></div><div class="ttdeci">const uint8_t PIN_COPO_ECHO</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00028">main.ino:28</a></div></div>
+<div class="ttc" id="amain_8ino_html_ab2e0f4d5d3b2dcf9cebcd16c78bc4c49"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a></div><div class="ttdeci">MachineState estadoAtual</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00019">main.ino:19</a></div></div>
+<div class="ttc" id="amain_8ino_html_ab89c744219dd775d6a159b3f252ef2b1"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#ab89c744219dd775d6a159b3f252ef2b1">page_fim_cha</a></div><div class="ttdeci">NexPage page_fim_cha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00048">main.ino:48</a></div></div>
+<div class="ttc" id="amain_8ino_html_abc337f391db256fbbff8b18b634d1515"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#abc337f391db256fbbff8b18b634d1515">RELE_ATIVO_BAIXO</a></div><div class="ttdeci">const bool RELE_ATIVO_BAIXO</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00035">main.ino:35</a></div></div>
+<div class="ttc" id="amain_8ino_html_ad4511438cf4217b161ce8dc2f4bb86db"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">processarEnchimento</a></div><div class="ttdeci">void processarEnchimento(NexProgressBar &amp;barra, uint8_t pinoMotor)</div><div class="ttdoc">Processa o enchimento de bebida com monitor de copo.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00142">main.ino:142</a></div></div>
+<div class="ttc" id="amain_8ino_html_ad79cc855cd4d56eae7f6ca8560b2e1de"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#ad79cc855cd4d56eae7f6ca8560b2e1de">page_moeda</a></div><div class="ttdeci">NexPage page_moeda</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00042">main.ino:42</a></div></div>
+<div class="ttc" id="amain_8ino_html_ad7a520681625acbdf67cdb3ce1c1ca31"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#ad7a520681625acbdf67cdb3ce1c1ca31">page_fim_cafe</a></div><div class="ttdeci">NexPage page_fim_cafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00047">main.ino:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>main.ino</b></li>
-    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dc/d3c/main_8ino.html">main.ino</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

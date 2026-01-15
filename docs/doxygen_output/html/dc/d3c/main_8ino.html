@@ -1,0 +1,940 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Automated Coffee &amp; Tea Machine: Referência ao ficheiro src/main.ino</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen_custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Automated Coffee &amp; Tea Machine
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">ESP32-based embedded system for hot beverage vending with Nextion HMI</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dc/d3c/main_8ino.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Enumerações</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro main.ino</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;Nextion.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para main.ino:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d00/main_8ino__incl.png" border="0" usemap="#asrc_2main_8ino" alt=""/></div>
+<map name="asrc_2main_8ino" id="asrc_2main_8ino">
+<area shape="rect" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="14,80,99,107"/>
+</map>
+</div>
+</div>
+<p><a href="../../dc/d3c/main_8ino_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerações</h2></td></tr>
+<tr class="memitem:a80b08f71210afe16038e904a656ed9eb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a>
+, <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443">ST_AGUARDA_MOEDA</a>
+, <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb">ST_AGUARDA_COPO</a>
+, <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed">ST_ESCOLHA</a>
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f">ST_PREPARO_CAFE</a>
+, <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c">ST_PREPARO_CHA</a>
+, <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1">ST_FIM_CAFE</a>
+, <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8">ST_FIM_CHA</a>
+<br />
+ }</td></tr>
+<tr class="separator:a80b08f71210afe16038e904a656ed9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a46bafc5ad318315f3e892cbdc9c14f15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">lerDistanciaMM</a> (uint8_t pinTrig, uint8_t pinEcho)</td></tr>
+<tr class="memdesc:a46bafc5ad318315f3e892cbdc9c14f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê a distância em milímetros usando sensor ultrassônico HC-SR04.  <a href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15">Mais...</a><br /></td></tr>
+<tr class="separator:a46bafc5ad318315f3e892cbdc9c14f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2a5c6c8bb0ea2883e97b64464dd5cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">controlarRele</a> (uint8_t pino, bool ligar)</td></tr>
+<tr class="memdesc:a0d2a5c6c8bb0ea2883e97b64464dd5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controla o estado de um relé (ligar/desligar motor)  <a href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb">Mais...</a><br /></td></tr>
+<tr class="separator:a0d2a5c6c8bb0ea2883e97b64464dd5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695a72bce78a64392b41eee5e0cd4090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090">bCafePopCallback</a> (void *ptr)</td></tr>
+<tr class="memdesc:a695a72bce78a64392b41eee5e0cd4090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café  <a href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090">Mais...</a><br /></td></tr>
+<tr class="separator:a695a72bce78a64392b41eee5e0cd4090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82fea8480d019d7fabb45dd755490d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99">bChaPopCallback</a> (void *ptr)</td></tr>
+<tr class="memdesc:a82fea8480d019d7fabb45dd755490d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá  <a href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99">Mais...</a><br /></td></tr>
+<tr class="separator:a82fea8480d019d7fabb45dd755490d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4511438cf4217b161ce8dc2f4bb86db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">processarEnchimento</a> (NexProgressBar &amp;barra, uint8_t pinoMotor)</td></tr>
+<tr class="memdesc:ad4511438cf4217b161ce8dc2f4bb86db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processa o enchimento de bebida com monitor de copo.  <a href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db">Mais...</a><br /></td></tr>
+<tr class="separator:ad4511438cf4217b161ce8dc2f4bb86db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dfd9b79bc5a37d7df40207afbc5431f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f">setup</a> (void)</td></tr>
+<tr class="memdesc:a7dfd9b79bc5a37d7df40207afbc5431f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura os periféricos e inicializa o sistema.  <a href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f">Mais...</a><br /></td></tr>
+<tr class="separator:a7dfd9b79bc5a37d7df40207afbc5431f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b33edabd7f1c4e4a0bf32c67269be2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f">loop</a> (void)</td></tr>
+<tr class="memdesc:a0b33edabd7f1c4e4a0bf32c67269be2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas.  <a href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f">Mais...</a><br /></td></tr>
+<tr class="separator:a0b33edabd7f1c4e4a0bf32c67269be2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:ab2e0f4d5d3b2dcf9cebcd16c78bc4c49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">estadoAtual</a> = <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a></td></tr>
+<tr class="separator:ab2e0f4d5d3b2dcf9cebcd16c78bc4c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568e357b49d602ea37998d8b5feb3484"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a568e357b49d602ea37998d8b5feb3484">PIN_MOEDA_TRIG</a> = 32</td></tr>
+<tr class="separator:a568e357b49d602ea37998d8b5feb3484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f80ea1b6e40f4b7d5f3274fe1bd4966"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a7f80ea1b6e40f4b7d5f3274fe1bd4966">PIN_MOEDA_ECHO</a> = 33</td></tr>
+<tr class="separator:a7f80ea1b6e40f4b7d5f3274fe1bd4966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991194834ca14ea27858a7ecd0a920b9"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a991194834ca14ea27858a7ecd0a920b9">PIN_COPO_TRIG</a> = 19</td></tr>
+<tr class="separator:a991194834ca14ea27858a7ecd0a920b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad575b89e08082dff17682db81ffe73a"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#aad575b89e08082dff17682db81ffe73a">PIN_COPO_ECHO</a> = 18</td></tr>
+<tr class="separator:aad575b89e08082dff17682db81ffe73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa921421d435cf605148dcfcdc8c0f93c"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#aa921421d435cf605148dcfcdc8c0f93c">PIN_RELE_CAFE</a> = 25</td></tr>
+<tr class="separator:aa921421d435cf605148dcfcdc8c0f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66464ba55c33a9db8909bd7b5f09abd4"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a66464ba55c33a9db8909bd7b5f09abd4">PIN_RELE_CHA</a> = 26</td></tr>
+<tr class="separator:a66464ba55c33a9db8909bd7b5f09abd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc337f391db256fbbff8b18b634d1515"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#abc337f391db256fbbff8b18b634d1515">RELE_ATIVO_BAIXO</a> = true</td></tr>
+<tr class="separator:abc337f391db256fbbff8b18b634d1515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9108863a47d2b10d62111278015399"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a7f9108863a47d2b10d62111278015399">page_initial</a> = NexPage(0, 0, &quot;page_initial&quot;)</td></tr>
+<tr class="separator:a7f9108863a47d2b10d62111278015399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79cc855cd4d56eae7f6ca8560b2e1de"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#ad79cc855cd4d56eae7f6ca8560b2e1de">page_moeda</a> = NexPage(1, 0, &quot;page_moeda&quot;)</td></tr>
+<tr class="separator:ad79cc855cd4d56eae7f6ca8560b2e1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f958d95ead8e24a6aff89b50cd7c767"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a9f958d95ead8e24a6aff89b50cd7c767">page_in_copo</a> = NexPage(2, 0, &quot;page_in_copo&quot;)</td></tr>
+<tr class="separator:a9f958d95ead8e24a6aff89b50cd7c767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ef588755b6e9c1b8afaa1d715668ce"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a63ef588755b6e9c1b8afaa1d715668ce">page_escolha</a> = NexPage(3, 0, &quot;page_escolha&quot;)</td></tr>
+<tr class="separator:a63ef588755b6e9c1b8afaa1d715668ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c15f8189d8f9812bbbe2be76398a0b"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#aa0c15f8189d8f9812bbbe2be76398a0b">page_cafe</a> = NexPage(4, 0, &quot;page_cafe&quot;)</td></tr>
+<tr class="separator:aa0c15f8189d8f9812bbbe2be76398a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01f4902c70ffbe79064aec10c3d3e3f"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#aa01f4902c70ffbe79064aec10c3d3e3f">page_cha</a> = NexPage(5, 0, &quot;page_cha&quot;)</td></tr>
+<tr class="separator:aa01f4902c70ffbe79064aec10c3d3e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a520681625acbdf67cdb3ce1c1ca31"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#ad7a520681625acbdf67cdb3ce1c1ca31">page_fim_cafe</a> = NexPage(6, 0, &quot;page_fim_cafe&quot;)</td></tr>
+<tr class="separator:ad7a520681625acbdf67cdb3ce1c1ca31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89c744219dd775d6a159b3f252ef2b1"><td class="memItemLeft" align="right" valign="top">NexPage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#ab89c744219dd775d6a159b3f252ef2b1">page_fim_cha</a> = NexPage(7, 0, &quot;page_fim_cha&quot;)</td></tr>
+<tr class="separator:ab89c744219dd775d6a159b3f252ef2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388ef866b82a2c2802dd4bdaf179ab7c"><td class="memItemLeft" align="right" valign="top">NexButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a> = NexButton(3, 2, &quot;bCafe&quot;)</td></tr>
+<tr class="separator:a388ef866b82a2c2802dd4bdaf179ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27bed14a86e4ee183f4d06d11e27572c"><td class="memItemLeft" align="right" valign="top">NexButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a> = NexButton(3, 3, &quot;bCha&quot;)</td></tr>
+<tr class="separator:a27bed14a86e4ee183f4d06d11e27572c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7649e4d5329d131b09fd4e07dfc54c35"><td class="memItemLeft" align="right" valign="top">NexProgressBar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a7649e4d5329d131b09fd4e07dfc54c35">bar_cafe</a> = NexProgressBar(4, 2, &quot;j0&quot;)</td></tr>
+<tr class="separator:a7649e4d5329d131b09fd4e07dfc54c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8369375d4d84ed1fb304ed1ae4babc5e"><td class="memItemLeft" align="right" valign="top">NexProgressBar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a8369375d4d84ed1fb304ed1ae4babc5e">bar_cha</a> = NexProgressBar(5, 2, &quot;j0&quot;)</td></tr>
+<tr class="separator:a8369375d4d84ed1fb304ed1ae4babc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8625e881f6750b8744b9473e7ada53"><td class="memItemLeft" align="right" valign="top">NexTouch *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d3c/main_8ino.html#a8f8625e881f6750b8744b9473e7ada53">nex_listen_list</a> []</td></tr>
+<tr class="separator:a8f8625e881f6750b8744b9473e7ada53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos valores da enumeração</h2>
+<a id="a80b08f71210afe16038e904a656ed9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b08f71210afe16038e904a656ed9eb">&#9670;&nbsp;</a></span>MachineState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumerações</th></tr><tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb"></a>ST_INICIO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba5b4254097255ec687f3b39b9e7add443"></a>ST_AGUARDA_MOEDA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba72f168bf69d75e44d5614f8998cdc0bb"></a>ST_AGUARDA_COPO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba899e6f7d901822c189628132759cb4ed"></a>ST_ESCOLHA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba1a2f75f73d60b8ed41d780dda3011e1f"></a>ST_PREPARO_CAFE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba981962e88f77cfeccdf21475749e2a5c"></a>ST_PREPARO_CHA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba925008d8b16361fe9a6cd123523795c1"></a>ST_FIM_CAFE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8"></a>ST_FIM_CHA&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00007">7</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a695a72bce78a64392b41eee5e0cd4090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695a72bce78a64392b41eee5e0cd4090">&#9670;&nbsp;</a></span>bCafePopCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bCafePopCallback </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café </p>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00114">114</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">estadoAtual</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00012">ST_PREPARO_CAFE</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a695a72bce78a64392b41eee5e0cd4090_icgraph.png" border="0" usemap="#adc/d3c/main_8ino_a695a72bce78a64392b41eee5e0cd4090_icgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a695a72bce78a64392b41eee5e0cd4090_icgraph" id="adc/d3c/main_8ino_a695a72bce78a64392b41eee5e0cd4090_icgraph">
+<area shape="rect" title="Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café" alt="" coords="112,5,252,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f" title="Configura os periféricos e inicializa o sistema." alt="" coords="5,5,64,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a82fea8480d019d7fabb45dd755490d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82fea8480d019d7fabb45dd755490d99">&#9670;&nbsp;</a></span>bChaPopCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bChaPopCallback </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá </p>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00122">122</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">estadoAtual</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00013">ST_PREPARO_CHA</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a82fea8480d019d7fabb45dd755490d99_icgraph.png" border="0" usemap="#adc/d3c/main_8ino_a82fea8480d019d7fabb45dd755490d99_icgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a82fea8480d019d7fabb45dd755490d99_icgraph" id="adc/d3c/main_8ino_a82fea8480d019d7fabb45dd755490d99_icgraph">
+<area shape="rect" title="Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá" alt="" coords="112,5,247,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f" title="Configura os periféricos e inicializa o sistema." alt="" coords="5,5,64,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0d2a5c6c8bb0ea2883e97b64464dd5cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2a5c6c8bb0ea2883e97b64464dd5cb">&#9670;&nbsp;</a></span>controlarRele()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlarRele </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ligar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controla o estado de um relé (ligar/desligar motor) </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pino</td><td>- Pino do relé (GPIO) </td></tr>
+    <tr><td class="paramname">ligar</td><td>- true para ligar, false para desligar</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Nota: A lógica XOR (^) com RELE_ATIVO_BAIXO inverte o sinal se necessário </p>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">101</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00035">RELE_ATIVO_BAIXO</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_icgraph.png" border="0" usemap="#adc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_icgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_icgraph" id="adc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_icgraph">
+<area shape="rect" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="315,31,424,57"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,5,267,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f" title="Configura os periféricos e inicializa o sistema." alt="" coords="156,56,215,83"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a46bafc5ad318315f3e892cbdc9c14f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46bafc5ad318315f3e892cbdc9c14f15">&#9670;&nbsp;</a></span>lerDistanciaMM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lerDistanciaMM </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pinTrig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pinEcho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê a distância em milímetros usando sensor ultrassônico HC-SR04. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pinTrig</td><td>- Pino de trigger (disparo do pulso) </td></tr>
+    <tr><td class="paramname">pinEcho</td><td>- Pino de echo (recepção da reflexão) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Distância em milímetros (sem uso de float para economizar memória)</dd></dl>
+<p>Fórmula: (Duração * 10) / 58 = Distância em mm (Equivalente a dividir por 5.8 usando apenas operações inteiras) </p>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00079">79</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a>.</p>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_icgraph.png" border="0" usemap="#adc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_icgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_icgraph" id="adc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_icgraph">
+<area shape="rect" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="315,5,439,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,5,56,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,31,267,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b33edabd7f1c4e4a0bf32c67269be2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b33edabd7f1c4e4a0bf32c67269be2f">&#9670;&nbsp;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas. </p>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">277</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00055">bar_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00056">bar_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">estadoAtual</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00079">lerDistanciaMM()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00059">nex_listen_list</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00045">page_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00046">page_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00044">page_escolha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00047">page_fim_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00048">page_fim_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00043">page_in_copo</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00042">page_moeda</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">PIN_COPO_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">PIN_COPO_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00024">PIN_MOEDA_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00023">PIN_MOEDA_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00031">PIN_RELE_CAFE</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00032">PIN_RELE_CHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00010">ST_AGUARDA_COPO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00009">ST_AGUARDA_MOEDA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00011">ST_ESCOLHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00014">ST_FIM_CAFE</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00015">ST_FIM_CHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00008">ST_INICIO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00012">ST_PREPARO_CAFE</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00013">ST_PREPARO_CHA</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph" id="adc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph">
+<area shape="rect" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,31,56,57"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="315,5,439,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,56,267,83"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="322,56,431,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad4511438cf4217b161ce8dc2f4bb86db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4511438cf4217b161ce8dc2f4bb86db">&#9670;&nbsp;</a></span>processarEnchimento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processarEnchimento </td>
+          <td>(</td>
+          <td class="paramtype">NexProgressBar &amp;&#160;</td>
+          <td class="paramname"><em>barra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pinoMotor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processa o enchimento de bebida com monitor de copo. </p>
+<p>Responsabilidades:</p><ul>
+<li>Controla o motor da bomba</li>
+<li>Incrementa a barra de progresso</li>
+<li>Detecta remoção do copo durante o processo</li>
+<li>Pausa e retoma automaticamente se copo for recolocado</li>
+</ul>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">barra</td><td>- Referência à barra de progresso Nextion </td></tr>
+    <tr><td class="paramname">pinoMotor</td><td>- Pino do relé do motor (CAFE ou CHA) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">142</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">controlarRele()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00079">lerDistanciaMM()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00059">nex_listen_list</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">PIN_COPO_ECHO</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">PIN_COPO_TRIG</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph" id="adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph">
+<area shape="rect" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="5,31,168,57"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="223,5,333,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="216,56,340,83"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_icgraph.png" border="0" usemap="#adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_icgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_icgraph" id="adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_icgraph">
+<area shape="rect" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,5,267,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7dfd9b79bc5a37d7df40207afbc5431f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dfd9b79bc5a37d7df40207afbc5431f">&#9670;&nbsp;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura os periféricos e inicializa o sistema. </p>
+<ul>
+<li>Abre comunicação serial</li>
+<li>Inicializa display Nextion</li>
+<li>Registra callbacks dos botões</li>
+<li>Configura pinos GPIO</li>
+<li>Desliga relés inicialmente </li>
+</ul>
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">236</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00051">bCafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00114">bCafePopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00052">bCha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00122">bChaPopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">controlarRele()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00041">page_initial</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">PIN_COPO_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">PIN_COPO_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00024">PIN_MOEDA_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00023">PIN_MOEDA_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00031">PIN_RELE_CAFE</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00032">PIN_RELE_CHA</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a7dfd9b79bc5a37d7df40207afbc5431f_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_a7dfd9b79bc5a37d7df40207afbc5431f_cgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a7dfd9b79bc5a37d7df40207afbc5431f_cgraph" id="adc/d3c/main_8ino_a7dfd9b79bc5a37d7df40207afbc5431f_cgraph">
+<area shape="rect" title="Configura os periféricos e inicializa o sistema." alt="" coords="5,56,64,83"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090" title="Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café" alt="" coords="112,5,252,32"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99" title="Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá" alt="" coords="115,56,249,83"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="127,107,237,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das variáveis</h2>
+<a id="a7649e4d5329d131b09fd4e07dfc54c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7649e4d5329d131b09fd4e07dfc54c35">&#9670;&nbsp;</a></span>bar_cafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexProgressBar bar_cafe = NexProgressBar(4, 2, &quot;j0&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00055">55</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a8369375d4d84ed1fb304ed1ae4babc5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8369375d4d84ed1fb304ed1ae4babc5e">&#9670;&nbsp;</a></span>bar_cha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexProgressBar bar_cha = NexProgressBar(5, 2, &quot;j0&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00056">56</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a388ef866b82a2c2802dd4bdaf179ab7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388ef866b82a2c2802dd4bdaf179ab7c">&#9670;&nbsp;</a></span>bCafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexButton bCafe = NexButton(3, 2, &quot;bCafe&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00051">51</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a27bed14a86e4ee183f4d06d11e27572c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27bed14a86e4ee183f4d06d11e27572c">&#9670;&nbsp;</a></span>bCha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexButton bCha = NexButton(3, 3, &quot;bCha&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00052">52</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="ab2e0f4d5d3b2dcf9cebcd16c78bc4c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e0f4d5d3b2dcf9cebcd16c78bc4c49">&#9670;&nbsp;</a></span>estadoAtual</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a> estadoAtual = <a class="el" href="../../dc/d3c/main_8ino.html#a80b08f71210afe16038e904a656ed9eba747a8f3380ac53cbfa4201c80c4f92fb">ST_INICIO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">19</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00114">bCafePopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00122">bChaPopCallback()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a8f8625e881f6750b8744b9473e7ada53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8625e881f6750b8744b9473e7ada53">&#9670;&nbsp;</a></span>nex_listen_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexTouch* nex_listen_list[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a>,</div>
+<div class="line">  &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a>,</div>
+<div class="line">  NULL</div>
+<div class="line">}</div>
+<div class="ttc" id="amain_8ino_html_a27bed14a86e4ee183f4d06d11e27572c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a></div><div class="ttdeci">NexButton bCha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00052">main.ino:52</a></div></div>
+<div class="ttc" id="amain_8ino_html_a388ef866b82a2c2802dd4bdaf179ab7c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a></div><div class="ttdeci">NexButton bCafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00051">main.ino:51</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00059">59</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a>.</p>
+
+</div>
+</div>
+<a id="aa0c15f8189d8f9812bbbe2be76398a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c15f8189d8f9812bbbe2be76398a0b">&#9670;&nbsp;</a></span>page_cafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_cafe = NexPage(4, 0, &quot;page_cafe&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00045">45</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="aa01f4902c70ffbe79064aec10c3d3e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01f4902c70ffbe79064aec10c3d3e3f">&#9670;&nbsp;</a></span>page_cha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_cha = NexPage(5, 0, &quot;page_cha&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00046">46</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a63ef588755b6e9c1b8afaa1d715668ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ef588755b6e9c1b8afaa1d715668ce">&#9670;&nbsp;</a></span>page_escolha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_escolha = NexPage(3, 0, &quot;page_escolha&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00044">44</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="ad7a520681625acbdf67cdb3ce1c1ca31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a520681625acbdf67cdb3ce1c1ca31">&#9670;&nbsp;</a></span>page_fim_cafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_fim_cafe = NexPage(6, 0, &quot;page_fim_cafe&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00047">47</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="ab89c744219dd775d6a159b3f252ef2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89c744219dd775d6a159b3f252ef2b1">&#9670;&nbsp;</a></span>page_fim_cha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_fim_cha = NexPage(7, 0, &quot;page_fim_cha&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00048">48</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a9f958d95ead8e24a6aff89b50cd7c767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f958d95ead8e24a6aff89b50cd7c767">&#9670;&nbsp;</a></span>page_in_copo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_in_copo = NexPage(2, 0, &quot;page_in_copo&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00043">43</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a7f9108863a47d2b10d62111278015399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f9108863a47d2b10d62111278015399">&#9670;&nbsp;</a></span>page_initial</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_initial = NexPage(0, 0, &quot;page_initial&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00041">41</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="ad79cc855cd4d56eae7f6ca8560b2e1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad79cc855cd4d56eae7f6ca8560b2e1de">&#9670;&nbsp;</a></span>page_moeda</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NexPage page_moeda = NexPage(1, 0, &quot;page_moeda&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00042">42</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+
+</div>
+</div>
+<a id="aad575b89e08082dff17682db81ffe73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad575b89e08082dff17682db81ffe73a">&#9670;&nbsp;</a></span>PIN_COPO_ECHO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t PIN_COPO_ECHO = 18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">28</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a991194834ca14ea27858a7ecd0a920b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991194834ca14ea27858a7ecd0a920b9">&#9670;&nbsp;</a></span>PIN_COPO_TRIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t PIN_COPO_TRIG = 19</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">27</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a7f80ea1b6e40f4b7d5f3274fe1bd4966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f80ea1b6e40f4b7d5f3274fe1bd4966">&#9670;&nbsp;</a></span>PIN_MOEDA_ECHO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t PIN_MOEDA_ECHO = 33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00024">24</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a568e357b49d602ea37998d8b5feb3484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a568e357b49d602ea37998d8b5feb3484">&#9670;&nbsp;</a></span>PIN_MOEDA_TRIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t PIN_MOEDA_TRIG = 32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00023">23</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="aa921421d435cf605148dcfcdc8c0f93c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa921421d435cf605148dcfcdc8c0f93c">&#9670;&nbsp;</a></span>PIN_RELE_CAFE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t PIN_RELE_CAFE = 25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00031">31</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a66464ba55c33a9db8909bd7b5f09abd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66464ba55c33a9db8909bd7b5f09abd4">&#9670;&nbsp;</a></span>PIN_RELE_CHA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t PIN_RELE_CHA = 26</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00032">32</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+
+</div>
+</div>
+<a id="abc337f391db256fbbff8b18b634d1515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc337f391db256fbbff8b18b634d1515">&#9670;&nbsp;</a></span>RELE_ATIVO_BAIXO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool RELE_ATIVO_BAIXO = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00035">35</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">controlarRele()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dc/d3c/main_8ino.html">main.ino</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

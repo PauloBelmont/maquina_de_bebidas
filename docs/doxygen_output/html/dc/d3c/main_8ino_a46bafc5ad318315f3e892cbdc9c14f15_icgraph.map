@@ -1,0 +1,5 @@
+<map id="lerDistanciaMM" name="lerDistanciaMM">
+<area shape="rect" id="node1" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="315,5,439,32"/>
+<area shape="rect" id="node2" href="$dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node3" href="$dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,31,267,57"/>
+</map>

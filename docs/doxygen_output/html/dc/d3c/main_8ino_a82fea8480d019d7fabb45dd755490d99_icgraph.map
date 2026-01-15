@@ -1,0 +1,4 @@
+<map id="bChaPopCallback" name="bChaPopCallback">
+<area shape="rect" id="node1" title="Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá" alt="" coords="112,5,247,32"/>
+<area shape="rect" id="node2" href="$dc/d3c/main_8ino.html#a7dfd9b79bc5a37d7df40207afbc5431f" title="Configura os periféricos e inicializa o sistema." alt="" coords="5,5,64,32"/>
+</map>

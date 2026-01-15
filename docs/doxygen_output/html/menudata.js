@@ -25,4 +25,19 @@
 var menudata={children:[
 {text:"Página principal",url:"index.html"},
 {text:"Ficheiros",url:"files.html",children:[
-{text:"Lista de ficheiros",url:"files.html"}]}]}
+{text:"Lista de ficheiros",url:"files.html"},
+{text:"Globais",url:"globals.html",children:[
+{text:"Tudo",url:"globals.html",children:[
+{text:"b",url:"globals.html#index_b"},
+{text:"c",url:"globals.html#index_c"},
+{text:"e",url:"globals.html#index_e"},
+{text:"l",url:"globals.html#index_l"},
+{text:"m",url:"globals.html#index_m"},
+{text:"n",url:"globals.html#index_n"},
+{text:"p",url:"globals.html#index_p"},
+{text:"r",url:"globals.html#index_r"},
+{text:"s",url:"globals.html#index_s"}]},
+{text:"Funções",url:"globals_func.html"},
+{text:"Variáveis",url:"globals_vars.html"},
+{text:"Enumerações",url:"globals_enum.html"},
+{text:"Valores de enumerações",url:"globals_eval.html"}]}]}]}

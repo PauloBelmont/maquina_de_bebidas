@@ -25,17 +25,33 @@
 var NAVTREE =
 [
   [ "Automated Coffee & Tea Machine", "index.html", [
+    [ "Automated Coffee & Tea Machine (ESP32 + Nextion)", "index.html", [
+      [ "📚 About This Project", "index.html#autotoc_md1", null ],
+      [ "📂 Contents", "index.html#autotoc_md3", null ],
+      [ "🛠 Hardware", "index.html#autotoc_md4", null ],
+      [ "Software Used", "index.html#autotoc_md5", null ],
+      [ "How it Works", "index.html#autotoc_md6", null ],
+      [ "🔌 Pinout (ESP32)", "index.html#autotoc_md7", null ],
+      [ "Authors", "index.html#autotoc_md8", null ],
+      [ "Additional Photos", "index.html#autotoc_md9", null ]
+    ] ],
     [ "Ficheiros", "files.html", [
-      [ "Lista de ficheiros", "files.html", "files_dup" ]
+      [ "Lista de ficheiros", "files.html", "files_dup" ],
+      [ "Globais", "globals.html", [
+        [ "Tudo", "globals.html", null ],
+        [ "Funções", "globals_func.html", null ],
+        [ "Variáveis", "globals_vars.html", null ],
+        [ "Enumerações", "globals_enum.html", null ],
+        [ "Valores de enumerações", "globals_eval.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"dc/d3c/main_8ino_source.html"
+"dc/d3c/main_8ino.html"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';
 var SYNCOFFMSG = 'clique para ativar a sincronização do painel';
-var LISTOFALLMEMBERS = 'Mostrar lista completa dos membros';

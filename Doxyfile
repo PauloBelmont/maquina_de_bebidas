@@ -13,13 +13,17 @@ PROJECT_BRIEF          = "ESP32-based embedded system for hot beverage vending w
 PROJECT_LOGO           = 
 
 # Input & Output Paths
-INPUT                  = src/ docs/
+INPUT                  = README.md src/ docs/
 INPUT_ENCODING         = UTF-8
 OUTPUT_DIRECTORY       = ./docs/doxygen_output
 CREATE_SUBDIRS         = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+IMAGE_PATH             = docs/img
+EXCLUDE_PATTERNS       = */build/* */.git/* */doxygen_output/*
 
 # Source Code Settings
 FILE_PATTERNS          = *.ino *.cpp *.h *.hpp *.c
+EXTENSION_MAPPING      = ino=C++
 RECURSIVE              = YES
 EXCLUDE_PATTERNS       = */build/* */.git/*
 EXCLUDE_SYMLINKS       = YES
@@ -37,6 +41,7 @@ HTML_FILE_EXTENSION    = .html
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
 HTML_COLORSTYLE_GAMMA  = 80
+HTML_EXTRA_STYLESHEET  = docs/doxygen_custom.css
 DISABLE_INDEX          = NO
 GENERATE_TREEVIEW      = YES
 TREEVIEW_WIDTH         = 250
@@ -47,7 +52,7 @@ LATEX_CMD_NAME         = latex
 MAKEINDEX_CMD_NAME     = makeindex
 
 # Documentation Extraction
-EXTRACT_ALL            = NO
+EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_STATIC         = YES
 EXTRACT_LOCAL_CLASSES  = YES
@@ -119,6 +124,9 @@ ALIASES                =
 
 # Output Language
 OUTPUT_LANGUAGE        = Portuguese
+
+# Output settings
+OPTIMIZE_OUTPUT_FOR_C  = YES 
 
 # Source Code Highlighting
 SOURCE_BROWSER         = YES
