@@ -4,7 +4,7 @@
 
 This project was developed at the **Federal University of Roraima (UFRR)**, in the **Maloca das iCoisas Laboratory**, as part of the course **COMP 923 - Embedded Systems**, under the guidance of [**Prof. Herbert Rocha**](https://github.com/hbgit).
 
----
+![3D-printed coffee and tea vending machine prototype disassembled on a workbench, showing the main enclosure with screen and DCC logo, side panels, cylindrical reservoirs, wiring and assembly tools](src/docs/img/project3d-overview.jpeg)
 
 This project is an embedded system for a hot beverage vending machine (coffee and tea). It uses an ESP32 for logic control, ultrasonic sensors for process detection, and a Nextion display for the Human-Machine Interface (HMI).
 
@@ -44,6 +44,8 @@ The physical project consists of the following components:
 
 ## How it Works
 
+![Team members assembling the 3D-printed coffee machine structure and gluing components during the prototype build](src/docs/img/project3d-team-workbench-2.jpeg)
+
 The code operates based on a Finite State Machine (FSM), ensuring the process follows a safe logical order:
 
 1.  **Start:** The system initializes and waits for a coin to be inserted.
@@ -68,10 +70,11 @@ The code operates based on a Finite State Machine (FSM), ensuring the process fo
 
 ## Authors
 
-* Andersson Silva Pereira - andersonwya4@gmail.com
-* Matheus Rebouças de Lima - matheuskid11@gmail.com
-* Paulo César Pereira Belmont - paulopereira737@hotmail.com
-* Sarah Evelyn do Vale Silva - sarahevelyn.scholar@gmail.com
+- **Andersson Silva Pereira** — *andersonwya4@gmail.com*
+- **Matheus Rebouças de Lima** — *mthsbusiness91@protonmail.com*
+- **Paulo César Pereira Belmont** — *paulopereira737@hotmail.com*
+- **Sarah Evelyn do Vale Silva** — *sarahevelyn.scholar@gmail.com*
 
----
-*This project was developed for educational purposes in embedded systems.*
+## Additional Photos
+
+More photos of the 3D-printed parts, internal circuits and assembly process are available in the [`src/docs/img/`](src/docs/img/) folder.
