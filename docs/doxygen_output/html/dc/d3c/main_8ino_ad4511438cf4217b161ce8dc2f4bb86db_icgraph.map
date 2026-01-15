@@ -1,0 +1,4 @@
+<map id="processarEnchimento" name="processarEnchimento">
+<area shape="rect" id="node1" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,5,267,32"/>
+<area shape="rect" id="node2" href="$dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,5,56,32"/>
+</map>

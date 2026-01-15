@@ -1,0 +1,5 @@
+<map id="processarEnchimento" name="processarEnchimento">
+<area shape="rect" id="node1" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="5,31,168,57"/>
+<area shape="rect" id="node2" href="$dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="223,5,333,32"/>
+<area shape="rect" id="node3" href="$dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="216,56,340,83"/>
+</map>
