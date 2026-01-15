@@ -1,0 +1,63 @@
+A seguir estão **duas tabelas comparativas**:
+
+1. pontos em comum entre os quatro artigos e
+2. diferenças entre cada um.
+
+Para facilitar, os artigos são identificados assim:
+
+* **A1** – Innovation Station (vending de impressão 3D)
+* **A2** – Didactic Vending Machine (Arduino)
+* **A3** – Energetically Efficient Vending Machine
+* **A4** – RPJ 2014 (vending/mechatronic systems)
+
+---
+
+## 🔹 Tabela 1 — Pontos em comum entre os quatro artigos
+
+| Ponto em comum             | Descrição                                                      |
+| -------------------------- | -------------------------------------------------------------- |
+| Uso de máquina vending     | Todos utilizam máquinas vending como base do sistema.          |
+| Automação do processo      | A entrega do produto é totalmente automatizada.                |
+| Integração mecatrônica     | Combinam mecânica, eletrônica e software.                      |
+| Uso de sistemas embarcados | Emprego de microcontroladores ou controle computacional.       |
+| Prototipagem física        | Todos apresentam protótipos funcionais.                        |
+| Modelagem ou simulação     | Utilizam simulação, CAD ou modelagem virtual.                  |
+| Foco em inovação           | Propõem melhorias em relação às vending machines tradicionais. |
+| Preocupação com eficiência | Avaliam desempenho, consumo, confiabilidade ou otimização.     |
+| Aplicação prática          | Os sistemas são aplicáveis em ambiente real.                   |
+| Abordagem acadêmica        | Os projetos têm caráter científico ou educacional.             |
+
+Fontes: A1, A2, A3 e A4
+
+---
+
+## 🔹 Tabela 2 — Diferenças entre os artigos
+
+| Artigo | Objetivo principal           | Diferencial                                          | Área de foco                        |
+| ------ | ---------------------------- | ---------------------------------------------------- | ----------------------------------- |
+| A1     | Democratizar impressão 3D    | Remoção automática por ciclagem térmica + portal web | Manufatura aditiva e educação       |
+| A2     | Ensino de engenharia         | Arduino, SMS de estoque, sistema de troco            | Sistemas embarcados e didática      |
+| A3     | Sustentabilidade energética  | Alimentação solar e otimização de consumo            | Eficiência energética e mecatrônica |
+| A4     | Aplicação técnica/industrial | Ênfase em confiabilidade e controle                  | Automação industrial                |
+
+Fontes: A1, A2, A3 e A4
+
+---
+
+## 🔹 Interpretação rápida
+
+* Todos tratam de **vending machines automatizadas**, mas:
+
+  * A1 foca em **impressão 3D**;
+  * A2 em **ensino com Arduino**;
+  * A3 em **energia renovável e eficiência**;
+  * A4 em **robustez industrial**.
+
+---
+
+Se desejar, posso agora:
+
+✔ Converter isso em texto comparativo dissertativo
+✔ Criar versão em PDF
+✔ Adaptar para formato ABNT
+✔ Ou escrever conclusão comparativa pronta para trabalho acadêmico.
