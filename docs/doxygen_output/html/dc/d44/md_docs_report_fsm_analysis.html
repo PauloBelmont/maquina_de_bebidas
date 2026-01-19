@@ -89,17 +89,17 @@ $(document).ready(function(){initNavTree('dc/d44/md_docs_report_fsm_analysis.htm
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b>Project:</b> Automated Hot Beverage Machine <b>Module:</b> Firmware Logic (ESP32)</p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md44"></a>
 1. Overview</h1>
 <p>The system control logic is implemented using a <b>Finite State Machine (FSM)</b>. This approach ensures that the machine is always in a known, deterministic state, preventing invalid operations (e.g., pouring coffee without a cup or dispensing two drinks for one coin).</p>
 <p>The FSM manages the entire lifecycle of a transaction: from initialization and coin detection to beverage dispensing and system reset.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 2. State Diagram Representation</h1>
 <p>The following diagram represents the logical flow implemented in the firmware:</p>
 <p><img src="../../coffee_tea_vending_machine_fsm.png" alt="State Machine Diagram showing the transition flow from initialization to coin detection, cup verification, drink selection, and final dispensing loop" width="100%" class="inline"/></p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md46"></a>
 3. Detailed State Definitions</h1>
 <p>The system consists of <b>7 distinct states</b>. Each state defines specific active sensors and permitted actions.</p>
 <table class="markdownTable">
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('dc/d44/md_docs_report_fsm_analysis.htm
  Display: "Enjoy!"   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md47"></a>
 4. Transition Logic Table</h1>
 <p>Transitions are triggered by specific <b>events</b> (sensor readings, timers, or user inputs).</p>
 <table class="markdownTable">
@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('dc/d44/md_docs_report_fsm_analysis.htm
 <td class="markdownTableBodyLeft"><code>COFFEE/TEA_READY</code>   </td><td class="markdownTableBodyLeft"><code>cup_removed</code> (Distance &gt; Threshold)   </td><td class="markdownTableBodyLeft"><code>WAITING_FOR_COIN</code>   </td><td class="markdownTableBodyLeft">Reset cycle for next customer.   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md48"></a>
 5. Safety &amp; Reliability Features</h1>
 <p>The FSM implementation provides critical safety mechanisms:</p>
 <ol type="1">

@@ -15,7 +15,7 @@ The FSM manages the entire lifecycle of a transaction: from initialization and c
 
 The following diagram represents the logical flow implemented in the firmware:
 
-<img src="coffee_tea_vending_machine_fsm.png" alt="State Machine Diagram showing the transition flow from initialization to coin detection, cup verification, drink selection, and final dispensing loop" width="100%"/>
+<img src="../img/coffee_tea_vending_machine_fsm.png" alt="State Machine Diagram showing the transition flow from initialization to coin detection, cup verification, drink selection, and final dispensing loop" width="100%"/>
 
 ***
 

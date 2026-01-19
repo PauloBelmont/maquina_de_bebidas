@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['lerdistanciamm_16',['lerDistanciaMM',['../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15',1,'main.ino']]],
-  ['literature_5fcomparison_2emd_17',['literature_comparison.md',['../de/df4/literature__comparison_8md.html',1,'']]],
-  ['loop_18',['loop',['../dc/d3c/main_8ino.html#a0b33edabd7f1c4e4a0bf32c67269be2f',1,'main.ino']]]
+  ['iscoindetected_14',['isCoinDetected',['../df/dae/classMachineLogic.html#a5d3cbcea1dbc4dd1e1c9799761f28a53',1,'MachineLogic']]],
+  ['iscupcorrectlyplaced_15',['isCupCorrectlyPlaced',['../df/dae/classMachineLogic.html#a719a0fcf049f0a930163fa84bad3a56e',1,'MachineLogic']]],
+  ['iscuppresentduringfill_16',['isCupPresentDuringFill',['../df/dae/classMachineLogic.html#a9c9692d073abb0ef0f7e13d8448bdfc8',1,'MachineLogic']]],
+  ['iscupstillpresent_17',['isCupStillPresent',['../df/dae/classMachineLogic.html#a7e051896e5b9c7672b74ade799f51780',1,'MachineLogic']]]
 ];

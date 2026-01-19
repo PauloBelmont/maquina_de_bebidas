@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('d1/de3/md_docs_report_main.html','../.
 <div class="title">Technical Report </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md21"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md54"></a>
 Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <h3>Repository: <a href="https://github.com/PauloBelmont/maquina_de_bebidas">PauloBelmont/maquina_de_bebidas</a></h3>
 <p><b>Authors:</b> Andersson Silva Pereira, Matheus Rebouças de Lima, Paulo César Pereira Belmont, Sarah Evelyn do Vale Silva (<a href="https://github.com/PauloBelmont/maquina_de_bebidas" title="GitHub - PauloBelmont/maquina_de_bebidas: Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé">GitHub</a>) <b>License:</b> MIT (<a href="https://github.com/PauloBelmont/maquina_de_bebidas" title="GitHub - PauloBelmont/maquina_de_bebidas: Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé">GitHub</a>) <b>Date:</b> <em>January / 2026</em> <b>CAPES Category:</b> Prototype, system, artifact, or computational process with functional validation.</p>
@@ -101,11 +101,11 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <li>Is reproducible and subject to experimental validation.</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md56"></a>
 📌 1. Project Overview</h2>
 <p>The &quot;<b>Automated Hot Beverage Machine</b>&quot; project consists of an <b>embedded system for autonomous acquisition and preparation of hot beverages</b> (coffee and tea), integrating sensors, actuators, and human-machine interface (HMI). The system was developed with focus on educational applications and rapid prototyping in the context of embedded systems.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md58"></a>
 📐 2. Solution Scope</h2>
 <p>This technical report addresses:</p>
 <ul>
@@ -116,7 +116,7 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <li><b>Conclusions and evolution recommendations</b>.</li>
 </ul>
 <hr  />
-<h3><a class="anchor" id="autotoc_md27"></a>
+<h3><a class="anchor" id="autotoc_md60"></a>
 📚 2.1 Related Work &amp; Theoretical Analysis</h3>
 <p>To validate the architectural decisions of this project, a comparative study was conducted against four academic references (A1-A4), analyzing commonalities in embedded automation and differences in application scope (3D printing, education, energy efficiency).</p>
 <ul>
@@ -127,9 +127,9 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <li><b><a class="el" href="../../dc/d44/md_docs_report_fsm_analysis.html">⚙️ Read the FSM Logic Analysis</a></b></li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md62"></a>
 🏗️ 3. Technological Architecture</h2>
-<h3><a class="anchor" id="autotoc_md30"></a>
+<h3><a class="anchor" id="autotoc_md63"></a>
 🔌 3.1 Hardware</h3>
 <p>The machine utilizes a hybrid architecture combining electronic modules, detection sensors, and user interface:</p>
 <table class="markdownTable">
@@ -152,9 +152,9 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 </table>
 <p><b>Integration Description:</b> The <b>ESP32</b> orchestrates all modules, receiving sensor signals and commanding dosage pumps, ensuring the machine's operation cycle executes sequentially and safely. Event detection (such as coin insertion or cup presence) is performed by ultrasound, executing periodic readings and activations according to defined states.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md32"></a>
+<h3><a class="anchor" id="autotoc_md65"></a>
 🧠 3.2 Software</h3>
-<h4><a class="anchor" id="autotoc_md33"></a>
+<h4><a class="anchor" id="autotoc_md66"></a>
 🗂️ 3.2.1 Firmware (ESP32)</h4>
 <p>The firmware is <b>developed in C++ for the ESP32</b>, with logic based on <b>Finite State Machine (FSM)</b> to control operation phases:</p>
 <ol type="1">
@@ -167,7 +167,7 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 </ol>
 <p>This state pattern improves safety and reliability of the preparation process.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md35"></a>
+<h3><a class="anchor" id="autotoc_md68"></a>
 🎨 3.2.2 Human-Machine Interface (Nextion)</h3>
 <p>The graphical interface is designed to:</p>
 <ul>
@@ -177,26 +177,26 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 </ul>
 <p>The use of <b>Nextion</b> display facilitates building complex interfaces without overloading the main microcontroller.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md70"></a>
 🚀 4. Technological Innovation</h2>
 <p>This project presents innovative aspects for educational applications and prototyping:</p>
-<h3><a class="anchor" id="autotoc_md38"></a>
+<h3><a class="anchor" id="autotoc_md71"></a>
 ✓ Finite State Machine (FSM) Usage</h3>
 <p>FSM adoption organizes control flow and ensures robustness against asynchronous events, an essential factor in reactive embedded systems.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md40"></a>
+<h3><a class="anchor" id="autotoc_md73"></a>
 ✓ Ultrasonic Sensing</h3>
 <p>The use of <b>ultrasonic sensors for coin and cup detection</b> is more precise and less susceptible to failures than simple mechanical switches.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md42"></a>
+<h3><a class="anchor" id="autotoc_md75"></a>
 ✓ Agile Interface with Nextion</h3>
 <p>The separation between control (ESP32) and graphical interface (Nextion) is an architectural characteristic that <b>improves modularity and scalability</b>, especially when compared with systems implementing UI directly in firmware.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md44"></a>
+<h3><a class="anchor" id="autotoc_md77"></a>
 ✓ 3D Printing Applied to Prototyping</h3>
 <p>The use of <b>3D-printed components</b> for physical structure enables rapid adjustments and design customization, a differentiator for R&amp;D of interactive prototypes and IoT systems.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 📈 5. Innovation Characteristics and Impact</h2>
 <p>This project demonstrates <b>an advance in teaching embedded systems and sensory integration with actuators</b>. Furthermore:</p>
 <ul>
@@ -206,7 +206,7 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 </ul>
 <p>This foundation is comparable to beverage automation trends, where intelligent autonomous systems address automated preparation and dispensing solutions — technically relevant in the current context of automation and services. (<a href="https://www.tecmundo.com.br/tecnologia/47158-10-bartenders-robos-que-fazem-drinks-tao-bem-quanto-os-humanos.htm?utm_source=chatgpt.com" title="10 bartenders robôs que fazem drinks tão bem quanto os humanos | Internet">TecMundo</a>)</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md81"></a>
 🧩 6. Conceptual Diagram (Text)</h2>
 <div class="fragment"><div class="line">[Ultrasonic Sensor 1]       [Ultrasonic Sensor 2]</div>
 <div class="line">           │                        │</div>
@@ -217,7 +217,7 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <div class="line">           [Power Relay] ──→ [Peristaltic Pumps]</div>
 <div class="line">                    ↓</div>
 <div class="line">              Dispensing System</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md82"></a>
 🔄 7. System Architecture Diagram</h2>
 <div class="fragment"><div class="line">┌─────────────────────────────────────────────────────┐</div>
 <div class="line">│              ESP32 Firmware (FSM)                   │</div>
@@ -243,16 +243,16 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <li><b>Módulo Relé:</b> Controla ativação das bombas</li>
 <li><b>Display Nextion:</b> Interface gráfica via UART</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md83"></a>
 8. Sequence Diagram (Main Scenario)</h2>
 <div class="fragment"><div class="line">mermaid</div>
 <div class="line">sequenceDiagram</div>
 </div><!-- fragment --><p> mermaid sequenceDiagram participant U as User participant D as Nextion Display participant E as ESP32 participant S as Sensors participant P as Pump</p>
 <p>U -&gt;&gt; D: Interacts with interface S -&gt;&gt; E: Coin detected E -&gt;&gt; D: Requests cup insertion S -&gt;&gt; E: Cup detected U -&gt;&gt; D: Selects Coffee D -&gt;&gt; E: Sends command E -&gt;&gt; P: Activates coffee pump P --&gt;&gt; E: Dispensing completed E -&gt;&gt; D: Displays final message <code> </code></p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md85"></a>
 🧪 9. Technical Evaluation</h2>
-<h3><a class="anchor" id="autotoc_md53"></a>
+<h3><a class="anchor" id="autotoc_md86"></a>
 ✔ Strengths</h3>
 <ul>
 <li>Modularity between control and interface;</li>
@@ -260,7 +260,7 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <li>Potential for IoT extension;</li>
 <li>Software pattern usage (FSM).</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md54"></a>
+<h3><a class="anchor" id="autotoc_md87"></a>
 ⚠ Limitations</h3>
 <ul>
 <li>Lack of integration with modern payment methods;</li>
@@ -268,7 +268,7 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <li>Current scope limited to educational prototype.</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md89"></a>
 📌 10. Recommendations for Evolution</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -283,11 +283,11 @@ Project: Automated Hot Beverage Machine (Coffee and Tea)</h1>
 <td class="markdownTableBodyNone"><b>Machine Learning</b>   </td><td class="markdownTableBodyNone">Stock prediction or recommendation   </td></tr>
 </table>
 <hr  />
-<h2><a class="anchor" id="autotoc_md58"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 🏁 11. Conclusion</h2>
 <p>The <b>Automated Beverage Machine</b> project is a solid example of embedded systems prototyping with <b>sensory integration, reactive control, and user-friendly interface</b>. Its modular technological architecture and use of emerging technologies make it a relevant case for <b>R&amp;D&amp;I in IoT, physical automation, and advanced prototyping</b>.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md60"></a>
+<h2><a class="anchor" id="autotoc_md93"></a>
 📚 12. References</h2>
 <ol type="1">
 <li>Project GitHub repository: <em>PauloBelmont/maquina_de_bebidas</em> – README and code structure. (<a href="https://github.com/PauloBelmont/maquina_de_bebidas" title="GitHub - PauloBelmont/maquina_de_bebidas: Este repositório contém todos os artefatos relacionados ao projeto maquina de chafé">GitHub</a>)</li>

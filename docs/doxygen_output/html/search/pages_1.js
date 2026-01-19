@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['technical_20report_107',['Technical Report',['../d1/de3/md_docs_report_main.html',1,'']]]
+  ['automated_20coffee_20_26_20tea_20machine_20_28esp32_20_2b_20nextion_29_110',['Automated Coffee &amp; Tea Machine (ESP32 + Nextion)',['../index.html',1,'']]]
 ];
