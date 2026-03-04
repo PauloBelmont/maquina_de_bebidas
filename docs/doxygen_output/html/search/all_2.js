@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['controlarrele_7',['controlarRele',['../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb',1,'main.ino']]]
+  ['bar_5fcafe_3',['bar_cafe',['../dc/d3c/main_8ino.html#a7649e4d5329d131b09fd4e07dfc54c35',1,'main.ino']]],
+  ['bar_5fcha_4',['bar_cha',['../dc/d3c/main_8ino.html#a8369375d4d84ed1fb304ed1ae4babc5e',1,'main.ino']]],
+  ['bcafe_5',['bCafe',['../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c',1,'main.ino']]],
+  ['bcafepopcallback_6',['bCafePopCallback',['../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090',1,'main.ino']]],
+  ['bcha_7',['bCha',['../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c',1,'main.ino']]],
+  ['bchapopcallback_8',['bChaPopCallback',['../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99',1,'main.ino']]]
 ];

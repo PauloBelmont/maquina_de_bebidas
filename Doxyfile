@@ -13,16 +13,16 @@ PROJECT_BRIEF          = "ESP32-based embedded system for hot beverage vending w
 PROJECT_LOGO           = 
 
 # Input & Output Paths
-INPUT                  = README.md src/ docs/
+INPUT                  = README.md src/ docs/ lib/
 INPUT_ENCODING         = UTF-8
 OUTPUT_DIRECTORY       = ./docs/doxygen_output
 CREATE_SUBDIRS         = YES
 USE_MDFILE_AS_MAINPAGE = README.md
-IMAGE_PATH             = docs/img
+IMAGE_PATH             = docs/img docs/report
 EXCLUDE_PATTERNS       = */build/* */.git/* */doxygen_output/*
 
 # Source Code Settings
-FILE_PATTERNS          = *.ino *.cpp *.h *.hpp *.c
+FILE_PATTERNS          = *.ino *.cpp *.h *.hpp *.c *.md
 EXTENSION_MAPPING      = ino=C++
 RECURSIVE              = YES
 EXCLUDE_PATTERNS       = */build/* */.git/*

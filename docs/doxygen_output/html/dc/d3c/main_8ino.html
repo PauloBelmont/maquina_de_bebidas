@@ -92,14 +92,19 @@ $(document).ready(function(){initNavTree('dc/d3c/main_8ino.html','../../'); init
 <div class="title">Referência ao ficheiro main.ino</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;Nextion.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;Nextion.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dc2/MachineLogic_8h_source.html">MachineLogic.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Diagrama de dependências de inclusão para main.ino:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d00/main_8ino__incl.png" border="0" usemap="#asrc_2main_8ino" alt=""/></div>
 <map name="asrc_2main_8ino" id="asrc_2main_8ino">
-<area shape="rect" title=" " alt="" coords="5,5,108,32"/>
-<area shape="rect" title=" " alt="" coords="14,80,99,107"/>
+<area shape="rect" title=" " alt="" coords="105,5,208,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,89,107"/>
+<area shape="rect" title=" " alt="" coords="114,80,199,107"/>
+<area shape="rect" href="../../dc/dc2/MachineLogic_8h.html" title=" " alt="" coords="223,80,346,107"/>
+<area shape="rect" title=" " alt="" coords="249,155,320,181"/>
 </map>
 </div>
 </div>
@@ -213,7 +218,7 @@ Variáveis</h2></td></tr>
 <tr><td class="fieldname"><a id="a80b08f71210afe16038e904a656ed9eba66e7dec948bff24228b7ba037b502bb8"></a>ST_FIM_CHA&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00007">7</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00009">9</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
 </div>
 </div>
@@ -236,11 +241,11 @@ Variáveis</h2></td></tr>
 
 <p>Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café </p>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00114">114</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00116">116</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">estadoAtual</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00012">ST_PREPARO_CAFE</a>.</p>
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00021">estadoAtual</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00014">ST_PREPARO_CAFE</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 <div class="dynheader">
 Este é o diagrama das funções que utilizam esta função:</div>
 <div class="dyncontent">
@@ -271,11 +276,11 @@ Este é o diagrama das funções que utilizam esta função:</div>
 
 <p>Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá </p>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00122">122</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00124">124</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">estadoAtual</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00013">ST_PREPARO_CHA</a>.</p>
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00021">estadoAtual</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00015">ST_PREPARO_CHA</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 <div class="dynheader">
 Este é o diagrama das funções que utilizam esta função:</div>
 <div class="dyncontent">
@@ -324,11 +329,20 @@ Este é o diagrama das funções que utilizam esta função:</div>
 </dl>
 <p>Nota: A lógica XOR (^) com RELE_ATIVO_BAIXO inverte o sinal se necessário </p>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">101</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00103">103</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00035">RELE_ATIVO_BAIXO</a>.</p>
+<p class="reference">Referências <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00029">MachineLogic::getRelayLevel()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00037">RELE_ATIVO_BAIXO</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_cgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_cgraph" id="adc/d3c/main_8ino_a0d2a5c6c8bb0ea2883e97b64464dd5cb_cgraph">
+<area shape="rect" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="5,5,115,32"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#ab4abb99ec924174a8e3a53fde26bb342" title=" " alt="" coords="163,5,375,32"/>
+</map>
+</div>
 <div class="dynheader">
 Este é o diagrama das funções que utilizam esta função:</div>
 <div class="dyncontent">
@@ -380,9 +394,20 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <dl class="section return"><dt>Retorna</dt><dd>Distância em milímetros (sem uso de float para economizar memória)</dd></dl>
 <p>Fórmula: (Duração * 10) / 58 = Distância em mm (Equivalente a dividir por 5.8 usando apenas operações inteiras) </p>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00079">79</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00081">81</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a>.</p>
+<p class="reference">Referências <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00024">MachineLogic::calculateDistanceMM()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">processarEnchimento()</a>.</p>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_cgraph" alt=""/></div>
+<map name="adc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_cgraph" id="adc/d3c/main_8ino_a46bafc5ad318315f3e892cbdc9c14f15_cgraph">
+<area shape="rect" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="5,5,129,32"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a176d1b2cd9f2be09873ddb035528e413" title=" " alt="" coords="177,5,436,32"/>
+</map>
+</div>
 <div class="dynheader">
 Este é o diagrama das funções que utilizam esta função:</div>
 <div class="dyncontent">
@@ -414,18 +439,24 @@ Este é o diagrama das funções que utilizam esta função:</div>
 
 <p>Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas. </p>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">277</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">279</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00055">bar_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00056">bar_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">estadoAtual</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00079">lerDistanciaMM()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00059">nex_listen_list</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00045">page_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00046">page_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00044">page_escolha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00047">page_fim_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00048">page_fim_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00043">page_in_copo</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00042">page_moeda</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">PIN_COPO_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">PIN_COPO_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00024">PIN_MOEDA_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00023">PIN_MOEDA_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00031">PIN_RELE_CAFE</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00032">PIN_RELE_CHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00010">ST_AGUARDA_COPO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00009">ST_AGUARDA_MOEDA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00011">ST_ESCOLHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00014">ST_FIM_CAFE</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00015">ST_FIM_CHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00008">ST_INICIO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00012">ST_PREPARO_CAFE</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00013">ST_PREPARO_CHA</a>.</p>
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00057">bar_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00058">bar_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00021">estadoAtual</a>, <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00004">MachineLogic::isCoinDetected()</a>, <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00009">MachineLogic::isCupCorrectlyPlaced()</a>, <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00019">MachineLogic::isCupStillPresent()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00081">lerDistanciaMM()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00061">nex_listen_list</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00047">page_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00048">page_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00046">page_escolha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00049">page_fim_cafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00050">page_fim_cha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00045">page_in_copo</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00044">page_moeda</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00030">PIN_COPO_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00029">PIN_COPO_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00026">PIN_MOEDA_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00025">PIN_MOEDA_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00033">PIN_RELE_CAFE</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00034">PIN_RELE_CHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">processarEnchimento()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00012">ST_AGUARDA_COPO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00011">ST_AGUARDA_MOEDA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00013">ST_ESCOLHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00016">ST_FIM_CAFE</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00017">ST_FIM_CHA</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00010">ST_INICIO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00014">ST_PREPARO_CAFE</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00015">ST_PREPARO_CHA</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph" alt=""/></div>
 <map name="adc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph" id="adc/d3c/main_8ino_a0b33edabd7f1c4e4a0bf32c67269be2f_cgraph">
-<area shape="rect" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,31,56,57"/>
-<area shape="rect" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="315,5,439,32"/>
-<area shape="rect" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="104,56,267,83"/>
-<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="322,56,431,83"/>
+<area shape="rect" title="Máquina de estados principal Gerencia as transições entre os diferentes estados da máquina de bebidas..." alt="" coords="5,107,56,133"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a5d3cbcea1dbc4dd1e1c9799761f28a53" title=" " alt="" coords="104,5,323,32"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a719a0fcf049f0a930163fa84bad3a56e" title=" " alt="" coords="371,45,585,86"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a7e051896e5b9c7672b74ade799f51780" title=" " alt="" coords="123,209,303,250"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="416,111,540,137"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#ad4511438cf4217b161ce8dc2f4bb86db" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="132,157,295,184"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a176d1b2cd9f2be09873ddb035528e413" title=" " alt="" coords="633,111,892,137"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="423,161,533,188"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a9c9692d073abb0ef0f7e13d8448bdfc8" title=" " alt="" coords="376,213,580,254"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#ab4abb99ec924174a8e3a53fde26bb342" title=" " alt="" coords="657,161,869,188"/>
 </map>
 </div>
 
@@ -472,19 +503,23 @@ Grafo de chamadas desta função:</div>
   </dd>
 </dl>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">142</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">144</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">controlarRele()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00079">lerDistanciaMM()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00059">nex_listen_list</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">PIN_COPO_ECHO</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">PIN_COPO_TRIG</a>.</p>
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00103">controlarRele()</a>, <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00009">MachineLogic::isCupCorrectlyPlaced()</a>, <a class="el" href="../../db/dbe/MachineLogic_8cpp_source.html#l00014">MachineLogic::isCupPresentDuringFill()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00081">lerDistanciaMM()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00061">nex_listen_list</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00030">PIN_COPO_ECHO</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00029">PIN_COPO_TRIG</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph.png" border="0" usemap="#adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph" alt=""/></div>
 <map name="adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph" id="adc/d3c/main_8ino_ad4511438cf4217b161ce8dc2f4bb86db_cgraph">
-<area shape="rect" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="5,31,168,57"/>
-<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="223,5,333,32"/>
-<area shape="rect" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="216,56,340,83"/>
+<area shape="rect" title="Processa o enchimento de bebida com monitor de copo." alt="" coords="5,97,168,124"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="269,5,378,32"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a719a0fcf049f0a930163fa84bad3a56e" title=" " alt="" coords="216,57,431,98"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a9c9692d073abb0ef0f7e13d8448bdfc8" title=" " alt="" coords="221,122,425,163"/>
+<area shape="rect" href="../../dc/d3c/main_8ino.html#a46bafc5ad318315f3e892cbdc9c14f15" title="Lê a distância em milímetros usando sensor ultrassônico HC&#45;SR04." alt="" coords="261,188,385,215"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#ab4abb99ec924174a8e3a53fde26bb342" title=" " alt="" coords="502,5,714,32"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#a176d1b2cd9f2be09873ddb035528e413" title=" " alt="" coords="479,188,737,215"/>
 </map>
 </div>
 <div class="dynheader">
@@ -524,9 +559,9 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <li>Desliga relés inicialmente </li>
 </ul>
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">236</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">238</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00051">bCafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00114">bCafePopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00052">bCha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00122">bChaPopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">controlarRele()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00041">page_initial</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">PIN_COPO_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">PIN_COPO_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00024">PIN_MOEDA_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00023">PIN_MOEDA_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00031">PIN_RELE_CAFE</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00032">PIN_RELE_CHA</a>.</p>
+<p class="reference">Referências <a class="el" href="../../dc/d3c/main_8ino_source.html#l00053">bCafe</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00116">bCafePopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00054">bCha</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00124">bChaPopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00103">controlarRele()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00043">page_initial</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00030">PIN_COPO_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00029">PIN_COPO_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00026">PIN_MOEDA_ECHO</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00025">PIN_MOEDA_TRIG</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00033">PIN_RELE_CAFE</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00034">PIN_RELE_CHA</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
@@ -536,6 +571,7 @@ Grafo de chamadas desta função:</div>
 <area shape="rect" href="../../dc/d3c/main_8ino.html#a695a72bce78a64392b41eee5e0cd4090" title="Callback disparado quando o botão de café é pressionado Altera o estado da máquina para preparar café" alt="" coords="112,5,252,32"/>
 <area shape="rect" href="../../dc/d3c/main_8ino.html#a82fea8480d019d7fabb45dd755490d99" title="Callback disparado quando o botão de chá é pressionado Altera o estado da máquina para preparar chá" alt="" coords="115,56,249,83"/>
 <area shape="rect" href="../../dc/d3c/main_8ino.html#a0d2a5c6c8bb0ea2883e97b64464dd5cb" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="127,107,237,133"/>
+<area shape="rect" href="../../df/dae/classMachineLogic.html#ab4abb99ec924174a8e3a53fde26bb342" title=" " alt="" coords="300,107,512,133"/>
 </map>
 </div>
 
@@ -554,9 +590,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00055">55</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00057">57</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -572,9 +608,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00056">56</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00058">58</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -590,9 +626,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00051">51</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00053">53</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -608,9 +644,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00052">52</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00054">54</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -626,9 +662,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00019">19</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00021">21</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00114">bCafePopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00122">bChaPopCallback()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00116">bCafePopCallback()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00124">bChaPopCallback()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -648,12 +684,12 @@ Grafo de chamadas desta função:</div>
 <div class="line">  &amp;<a class="code" href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a>,</div>
 <div class="line">  NULL</div>
 <div class="line">}</div>
-<div class="ttc" id="amain_8ino_html_a27bed14a86e4ee183f4d06d11e27572c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a></div><div class="ttdeci">NexButton bCha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00052">main.ino:52</a></div></div>
-<div class="ttc" id="amain_8ino_html_a388ef866b82a2c2802dd4bdaf179ab7c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a></div><div class="ttdeci">NexButton bCafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00051">main.ino:51</a></div></div>
+<div class="ttc" id="amain_8ino_html_a27bed14a86e4ee183f4d06d11e27572c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a27bed14a86e4ee183f4d06d11e27572c">bCha</a></div><div class="ttdeci">NexButton bCha</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00054">main.ino:54</a></div></div>
+<div class="ttc" id="amain_8ino_html_a388ef866b82a2c2802dd4bdaf179ab7c"><div class="ttname"><a href="../../dc/d3c/main_8ino.html#a388ef866b82a2c2802dd4bdaf179ab7c">bCafe</a></div><div class="ttdeci">NexButton bCafe</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d3c/main_8ino_source.html#l00053">main.ino:53</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00059">59</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00061">61</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">processarEnchimento()</a>.</p>
 
 </div>
 </div>
@@ -669,9 +705,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00045">45</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00047">47</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -687,9 +723,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00046">46</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00048">48</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -705,9 +741,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00044">44</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00046">46</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -723,9 +759,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00047">47</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00049">49</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -741,9 +777,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00048">48</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00050">50</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -759,9 +795,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00043">43</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00045">45</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -777,9 +813,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00041">41</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00043">43</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -795,9 +831,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00042">42</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00044">44</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>.</p>
 
 </div>
 </div>
@@ -813,9 +849,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00028">28</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00030">30</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -831,9 +867,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00027">27</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00029">29</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00142">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a>, <a class="el" href="../../dc/d3c/main_8ino_source.html#l00144">processarEnchimento()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -849,9 +885,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00024">24</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00026">26</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -867,9 +903,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00023">23</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00025">25</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -885,9 +921,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00031">31</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00033">33</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -903,9 +939,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00032">32</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00034">34</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00277">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00236">setup()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00279">loop()</a> e <a class="el" href="../../dc/d3c/main_8ino_source.html#l00238">setup()</a>.</p>
 
 </div>
 </div>
@@ -921,9 +957,9 @@ Grafo de chamadas desta função:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00035">35</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="../../dc/d3c/main_8ino_source.html#l00037">37</a> do ficheiro <a class="el" href="../../dc/d3c/main_8ino_source.html">main.ino</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00101">controlarRele()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="../../dc/d3c/main_8ino_source.html#l00103">controlarRele()</a>.</p>
 
 </div>
 </div>
