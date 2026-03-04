@@ -1,0 +1,4 @@
+<map id="controlarRele" name="controlarRele">
+<area shape="rect" id="node1" title="Controla o estado de um relé (ligar/desligar motor)" alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node2" href="$df/dae/classMachineLogic.html#ab4abb99ec924174a8e3a53fde26bb342" title=" " alt="" coords="163,5,375,32"/>
+</map>

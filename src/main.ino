@@ -1,4 +1,6 @@
+#include <Arduino.h> 
 #include "Nextion.h"
+#include "MachineLogic.h"
 
 // ============================================================
 // DEFINIÇÕES E CONFIGURAÇÕES
@@ -87,7 +89,7 @@ int lerDistanciaMM(uint8_t pinTrig, uint8_t pinEcho) {
   long duracao = pulseIn(pinEcho, HIGH, 30000);
 
   // Converte duração em milímetros (sem uso de float)
-  return (int)((duracao * 10) / 58);
+  return MachineLogic::calculateDistanceMM(duracao);
 }
 
 /**
@@ -99,7 +101,7 @@ int lerDistanciaMM(uint8_t pinTrig, uint8_t pinEcho) {
  * Nota: A lógica XOR (^) com RELE_ATIVO_BAIXO inverte o sinal se necessário
  */
 void controlarRele(uint8_t pino, bool ligar) {
-  int nivelLogico = (RELE_ATIVO_BAIXO ^ ligar) ? HIGH : LOW;
+  int nivelLogico = MachineLogic::getRelayLevel(ligar, RELE_ATIVO_BAIXO);
   digitalWrite(pino, nivelLogico);
 }
 
@@ -172,7 +174,7 @@ void processarEnchimento(NexProgressBar &barra, uint8_t pinoMotor) {
     Serial.println(distMM);
 
     // --- Lógica de Detecção de Copo (62mm ≈ 6.2cm) ---
-    if (distMM <= 62) {
+    if (MachineLogic::isCupPresentDuringFill(distMM)) {
       // Copo detectado
       delay(1000);
       controlarRele(pinoMotor, true);  // Liga o motor
@@ -203,7 +205,7 @@ void processarEnchimento(NexProgressBar &barra, uint8_t pinoMotor) {
         Serial.print("Aguardando copo: ");
         Serial.println(d);
 
-        if (d <= 60) {
+        if (MachineLogic::isCupCorrectlyPlaced(d)) { 
           copoVoltou = true;  // Copo foi recolocado
           break; 
         }
@@ -298,7 +300,7 @@ void loop(void) {
         Serial.println(distMM);
         
         // Moeda detectada quando distância < 25mm (2.5cm)
-        if (distMM < 25) {
+        if (MachineLogic::isCoinDetected(distMM)) {
           delay(500);  // Debounce
           break;
         }
@@ -320,7 +322,7 @@ void loop(void) {
         Serial.println(distMM);
         
         // Copo detectado quando 20mm < distância <= 60mm
-        if (distMM > 20 && distMM <= 60) break;
+        if (MachineLogic::isCupCorrectlyPlaced(distMM)) break;
         delay(100);
       }
       estadoAtual = ST_ESCOLHA;
@@ -354,7 +356,7 @@ void loop(void) {
     case ST_FIM_CAFE:
       // Café pronto - aguarda retirada do copo
       page_fim_cafe.show();
-      while(lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO) <= 50) {
+      while(MachineLogic::isCupStillPresent(lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO))) {
         delay(200);  // Verifica a cada 200ms
       }
       delay(2000);  // Aguarda 2 segundos adicionais
@@ -364,7 +366,7 @@ void loop(void) {
     case ST_FIM_CHA:
       // Chá pronto - aguarda retirada do copo
       page_fim_cha.show();
-      while(lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO) <= 50) {
+      while(MachineLogic::isCupStillPresent(lerDistanciaMM(PIN_COPO_TRIG, PIN_COPO_ECHO))) {
         delay(200);  // Verifica a cada 200ms
       }
       delay(2000);  // Aguarda 2 segundos adicionais
